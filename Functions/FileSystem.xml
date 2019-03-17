@@ -1,0 +1,65 @@
+<Functions For="FileSystem" Desc="Functions For FileSystem Class">
+	<Function>
+        <Name>GetKnownFolderPath</Name>
+        <Desc>Gets a known folder path on the operating system.</Desc>
+        <Args>					
+			<Arg>
+                <Name>FolderId</Name>
+                <Desc>The known folder Id.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>KFID_PROGRAM_FILES</Default>
+				<Options Type="number">
+					<Item Name="KFID_PROGRAMS" Type="number" Value="2" Desc="The file system directory that contains the user's program groups (which are themselves file system directories)." />
+					<Item Name="KFID_FAVORITES" Type="number" Value="6" Desc="The file system directory that serves as a common repository for the user's favorite items. " />
+					<Item Name="KFID_STARTUP" Type="number" Value="7" Desc="The file system directory that corresponds to the user's Startup program group. The system starts these programs whenever the associated user logs on. " />
+					<Item Name="KFID_RECENT" Type="number" Value="8" Desc="The file system directory that contains shortcuts to the user's most recently used documents." />
+					<Item Name="KFID_SENDTO" Type="number" Value="9" Desc="The file system directory that contains Send To menu items." />
+					<Item Name="KFID_STARTMENU" Type="number" Value="11" Desc="The file system directory that contains Start menu items." />
+					<Item Name="KFID_MYDOCUMENTS" Type="number" Value="5" Desc="The file system directory used to physically store a user's common repository of documents." />
+					<Item Name="KFID_MYMUSIC" Type="number" Value="13" Desc="The file system directory that serves as a common repository for music files." />
+					<Item Name="KFID_MYVIDEO" Type="number" Value="14" Desc="The file system directory that serves as a common repository for video files." />
+					<Item Name="KFID_DESKTOPDIRECTORY" Type="number" Value="16" Desc="The file system directory used to physically store file objects on the desktop. " />
+					<Item Name="KFID_NETHOOD" Type="number" Value="19" Desc="A file system directory that contains the link objects that may exist in the My Network Places virtual folder." />
+					<Item Name="KFID_FONTS" Type="number" Value="20" Desc="A virtual folder that contains fonts." />
+					<Item Name="KFID_TEMPLATES" Type="number" Value="21" Desc="The file system directory that serves as a common repository for document templates." />
+					<Item Name="KFID_COMMON_STARTMENU" Type="number" Value="22" Desc="The file system directory that contains the programs and folders that appear on the Start menu for all users. " />
+					<Item Name="KFID_COMMON_PROGRAMS" Type="number" Value="23" Desc="The file system directory that contains the directories for the common program groups that appear on the Start menu for all users. " />
+					<Item Name="KFID_COMMON_STARTUP" Type="number" Value="24" Desc="The file system directory that contains the programs that appear in the Startup folder for all users." />
+					<Item Name="KFID_COMMON_DESKTOPDIRECTORY" Type="number" Value="25" Desc="The file system directory that contains files and folders that appear on the desktop for all users." />
+					<Item Name="KFID_APPDATA" Type="number" Value="26" Desc="The file system directory that serves as a common repository for application-specific data." />
+					<Item Name="KFID_PRINTHOOD" Type="number" Value="27" Desc="The file system directory that contains the link objects that can exist in the Printers virtual folder." />
+					<Item Name="KFID_LOCAL_APPDATA" Type="number" Value="28" Desc="The file system directory that serves as a data repository for local (nonroaming) applications." />
+					<Item Name="KFID_COMMON_FAVORITES" Type="number" Value="31" Desc="The file system directory that serves as a common repository for favorite items common to all users." />
+					<Item Name="KFID_INTERNET_CACHE" Type="number" Value="32" Desc="The file system directory that serves as a common repository for temporary Internet files. " />
+					<Item Name="KFID_COOKIES" Type="number" Value="33" Desc="The file system directory that serves as a common repository for Internet cookies. " />
+					<Item Name="KFID_HISTORY" Type="number" Value="34" Desc="The file system directory that serves as a common repository for Internet history items." />
+					<Item Name="KFID_COMMON_APPDATA" Type="number" Value="35" Desc="The file system directory that contains application data for all users." />
+					<Item Name="KFID_WINDOWS" Type="number" Value="36" Desc="The Windows directory or SYSROOT." />
+					<Item Name="KFID_SYSTEM" Type="number" Value="37" Desc="The Windows System folder." />
+					<Item Name="KFID_PROGRAM_FILES" Type="number" Value="38" Desc="The Program Files folder." />
+					<Item Name="KFID_MYPICTURES" Type="number" Value="39" Desc="The file system directory that serves as a common repository for image files." />
+					<Item Name="KFID_PROFILE" Type="number" Value="40" Desc="The user's profile folder." />
+					<Item Name="KFID_SYSTEMX86" Type="number" Value="41" Desc="The Windows X86 System folder on 64Bits OS." />
+					<Item Name="KFID_PROGRAM_FILESX86" Type="number" Value="42" Desc="The Program Files folder of 32Bits programs on 64Bits Windows OS." />
+					<Item Name="KFID_COMMON_TEMPLATES" Type="number" Value="45" Desc="The file system directory that contains the templates that are available to all users." />
+					<Item Name="KFID_COMMON_DOCUMENTS" Type="number" Value="46" Desc="The file system directory that contains documents that are common to all users." />
+					<Item Name="KFID_COMMON_ADMINTOOLS" Type="number" Value="47" Desc="The file system directory that contains administrative tools for all users of the computer." />
+					<Item Name="KFID_ADMINTOOLS" Type="number" Value="48" Desc="The file system directory that is used to store administrative tools for an individual user. The MMC will save customized consoles to this directory, and it will roam with the user." />
+					<Item Name="KFID_COMMON_MUSIC" Type="number" Value="53" Desc="The file system directory that serves as a repository for music files common to all users." />
+					<Item Name="KFID_COMMON_PICTURES" Type="number" Value="54" Desc="The file system directory that serves as a repository for image files common to all users." />
+					<Item Name="KFID_COMMON_VIDEO" Type="number" Value="55" Desc="The file system directory that serves as a repository for video files common to all users." />
+					<Item Name="KFID_RESOURCES" Type="number" Value="56" Desc="The file system directory that contains resource data on Windows Vista and newer versions of windows OS. " />			
+					<Item Name="KFID_CDBURN_AREA" Type="number" Value="59" Desc="The file system directory that acts as a staging area for files waiting to be written to a CD." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the requested folder path without trailing back slash. &#x0A;If the function fails, the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strPath</Default>
+        </Return>
+    </Function>
+</Functions>
+

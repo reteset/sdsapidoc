@@ -1,0 +1,181 @@
+<!--
+Lua Types:
+LUA_TNIL			0 nil
+LUA_TBOOLEAN		1 boolean
+LUA_TLIGHTUSERDATA	2 lightuserdata
+LUA_TNUMBER			3 number
+LUA_TSTRING			4 string
+LUA_TTABLE			5 table
+LUA_TFUNCTION		6 function
+LUA_TUSERDATA		7 userdata
+LUA_TTHREAD			8 thread
+-->
+
+<Events For="WebBrowser" Desc="Events For WebBrowser">
+	<Event>
+		<Name>OnNavigateComplete</Name>
+		<Desc>Fires when the navigation has completed in the web browser control.</Desc>
+		<Args>
+			<Arg>
+				<Name>WebBrowser</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>WebBrowser</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Url</Name>
+				<Var>e_Url</Var>
+				<Type>string</Type>
+				<SubType>none</SubType>
+				<Desc>The URL that's being navigated to.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnCommandStateChange</Name>
+		<Desc>Fires when the command state of the navigation buttons has changed.</Desc>	
+		<Args>
+			<Arg>
+				<Name>WebBrowser</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>WebBrowser</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Command</Name>
+				<Var>e_Command</Var>
+				<Type>number</Type>
+				<SubType>combo</SubType>
+				<Desc>The enabled state of the specified navigation button.</Desc>
+				<Options Type="number">
+					<Item Name="1" Type="number" Value="1" Desc="The forward button." />
+					<Item Name="2" Type="number" Value="2" Desc="The backward button." />
+				</Options>
+			</Arg>
+			<Arg>
+				<Name>Enable</Name>
+				<Var>e_Enable</Var>
+				<Type>boolean</Type>
+				<SubType>combo</SubType>
+				<Desc>The enabled state of the specified navigation button.</Desc>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="The specified navigation button needs to be enabled." />
+					<Item Name="false" Type="boolean" Value="" Desc="The specified navigation button needs to be disabled." />
+				</Options>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnBeforeNavigate</Name>
+		<Desc>Fires before a navication occurs in a web browser.</Desc>
+		<Args>
+			<Arg>
+				<Name>WebBrowser</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>WebBrowser</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>URL</Name>
+				<Var>e_URL</Var>
+				<Type>string</Type>
+				<SubType>none</SubType>
+				<Desc>The Url that the browser is about to be navigated.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Target</Name>
+				<Var>e_Target</Var>
+				<Type>string</Type>
+				<SubType>none</SubType>
+				<Desc>The target frame that the browser is about to be navigated in.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+            <Desc>If navigation is allowed then return true. &#x0A;If navigation is not allowed, then event must return false.</Desc>
+            <Default>true</Default>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+			<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Allow further navigation in the web browser control." />
+					<Item Name="false" Type="boolean" Value="" Desc="Block navigation in the web browser control." />
+			</Options>
+        </Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnTitleTextChange</Name>
+		<Desc>Fires when the web browser title text has changed.</Desc>
+		<Args>
+			<Arg>
+				<Name>WebBrowser</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>WebBrowser</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>TitleText</Name>
+				<Var>e_TitleText</Var>
+				<Type>string</Type>
+				<SubType>none</SubType>
+				<Desc>The title text to display.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnStatusTextChange</Name>
+		<Desc>Fires when the web browser status text has changed.</Desc>
+		<Args>
+			<Arg>
+				<Name>WebBrowser</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>WebBrowser</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>StatusText</Name>
+				<Var>e_StatusText</Var>
+				<Type>string</Type>
+				<SubType>none</SubType>
+				<Desc>The status text to display.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+</Events>

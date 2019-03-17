@@ -1,0 +1,73 @@
+<Events For="Button" Desc="Events For Button Control">
+	<Event>
+		<Name>OnLeftClick</Name>
+		<Desc>Fires when the left mouse button is clicked in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>Button</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Button</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<SubType>none</SubType>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnRightClick</Name>
+		<Desc>Fires when the right mouse button is clicked in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>Button</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Button</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>none</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default></Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+</Events>

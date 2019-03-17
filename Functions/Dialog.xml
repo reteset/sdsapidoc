@@ -1,0 +1,267 @@
+<Functions For="Dialog" Desc="Functions For Dialog Class">
+	<Function>
+        <Name>BrowseFolder</Name>
+        <Desc>Opens the save file dialog to define a location and the file name.</Desc>
+        <Args>			
+			<Arg>
+                <Name>Caption</Name>
+                <Desc>The caption of the dialog box.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>"Select Location"</Default>
+            </Arg>
+			<Arg>
+                <Name>Initialdir</Name>
+                <Desc>The initial directory to browse.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>ENV_DESKTOP_FOLDER</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the path to selected directory. &#x0A;If the function fails,or user cancels the directory selection the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strFolder</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SaveFile</Name>
+        <Desc>Opens the save file dialog to define a location and the file name.</Desc>
+        <Args>			
+			<Arg>
+                <Name>Caption</Name>
+                <Desc>The caption of the dialog box.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>"Select File"</Default>
+            </Arg>
+			<Arg>
+                <Name>Initialdir</Name>
+                <Desc>The initial directory to browse for files.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>ENV_DESKTOP_FOLDER</Default>
+            </Arg>
+			<Arg>
+                <Name>FileName</Name>
+                <Desc>The default file name.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>DefaultExtension</Name>
+                <Desc>The default file extension.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>"txt"</Default>
+            </Arg>
+			<Arg>
+                <Name>Filters</Name>
+                <Desc>The file extension filters.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>"All Files(*.*)|*.*|"</Default>
+            </Arg>		
+			<Arg>
+                <Name>OverWritePrompt</Name>
+                <Desc>If user selects an existing file in destination directory then show an overwrtie prompt to the user.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>false</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Show overwrite prompt dialog." />
+					<Item Name="false" Type="boolean" Value="" Desc="Do not show overwrite prompt dialog." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the path to selected file. &#x0A;If the function fails,or user cancels the file selection the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strFile</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>OpenFile</Name>
+        <Desc>Opens the open file dialog to select one or more files.</Desc>
+        <Args>			
+			<Arg>
+                <Name>Caption</Name>
+                <Desc>The caption of the dialog box.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>"Select File"</Default>
+            </Arg>
+			<Arg>
+                <Name>Initialdir</Name>
+                <Desc>The initial directory to browse for files.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>ENV_DESKTOP_FOLDER</Default>
+            </Arg>
+			<Arg>
+                <Name>FileName</Name>
+                <Desc>The default file name.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>DefaultExtension</Name>
+                <Desc>The default file extension.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>"txt"</Default>
+            </Arg>
+			<Arg>
+                <Name>Filters</Name>
+                <Desc>The file extension filters.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>"All Files(*.*)|*.*|"</Default>
+            </Arg>
+			<Arg>
+                <Name>MultiSelect</Name>
+                <Desc>Whether to allow mutiple selection of files.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>false</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Allow multiple files selection." />
+					<Item Name="false" Type="boolean" Value="" Desc="Allow only single file selection." />
+				</Options>
+            </Arg>
+			<Arg>
+                <Name>MustExist</Name>
+                <Desc>The file name entered in to edit field must exist in destination directory.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="File must exist in destination directory." />
+					<Item Name="false" Type="boolean" Value="" Desc="File might not be exist on in destination directory." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a numerically indexed table that contains selected files. &#x0A;If the function fails,or user cancels the file selection the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>none</SubType>
+			<Default>local tblFiles</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>ChooseColor</Name>
+        <Desc>Opens system default color selection dialog box.</Desc>
+        <Args/>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (Decimal,Hex,Red,Green,Blue) . &#x0A;If the function fails,or user presses the cancel button the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblColor</Default>
+			<Options Type="table">
+				<Item Name="Decimal" Type="number" Value="" Desc="The decimal representation of the selected color ." />
+				<Item Name="Hex" Type="string" Value="" Desc="The hex representation of selected color." />
+				<Item Name="Red" Type="number" Value="" Desc="The red channel of the selected color [0 - 255]." />
+				<Item Name="Green" Type="number" Value="" Desc="The green channel of the selected color [0 - 255]." />
+				<Item Name="Blue" Type="number" Value="" Desc="The blue channel of the selected color [0 - 255]." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>MessageBox</Name>
+        <Desc>Inserts a new child element to specified parent element.</Desc>
+        <Args>
+			
+			<Arg>
+                <Name>Caption</Name>
+                <Desc>The caption of the message box.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>"Info"</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The text of the message box.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			
+			<Arg>
+                <Name>Options</Name>
+                <Desc>The option buttons to show.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>MB_OK</Default>
+				<Options Type="number">
+					<Item Name="MB_OK" Type="number" Value="0" Desc="Display OK button." />
+					<Item Name="MB_OKCANCEL" Type="number" Value="1" Desc="Display [OK,CANCEL] buttons." />
+					<Item Name="MB_ABORTRETRYIGNORE" Type="number" Value="2" Desc="Display [ABORT,RETRY,IGNORE] buttons." />
+					<Item Name="MB_YESNOCANCEL" Type="number" Value="3" Desc="Display [OK,CANCEL] buttons." />
+					<Item Name="MB_YESNO" Type="number" Value="4" Desc="Display [YES,NO,CANCEL] buttons." />
+					<Item Name="MB_RETRYCANCEL" Type="number" Value="5" Desc="Display [RETRY,CANCEL] buttons." />
+					<Item Name="MB_CANCELTRYCONTINUE" Type="number" Value="6" Desc="Display [CANCEL,TRYAGAIN,CONTINUE] buttons." />
+				</Options>
+            </Arg>
+			<Arg>
+                <Name>IconType</Name>
+                <Desc>The type of the dialog.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>MB_ICONINFORMATION</Default>
+				<Options Type="number">
+					<Item Name="MB_ICONNONE" Type="number" Value="0" Desc="Display no icon." />
+					<Item Name="MB_ICONERROR" Type="number" Value="16" Desc="Display an error icon." />
+					<Item Name="MB_ICONQUESTION" Type="number" Value="32" Desc="Display a question icon." />
+					<Item Name="MB_ICONWARNING" Type="number" Value="48" Desc="Display a warning icon." />
+					<Item Name="MB_ICONINFORMATION" Type="number" Value="64" Desc="Display an information icon." />
+					<!--<Item Name="MB_USERICON" Type="number" Value="128" Desc="" />-->
+				</Options>
+            </Arg>
+			<Arg>
+                <Name>DefaultOption</Name>
+                <Desc>The option that has the focus.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>MB_DEFOPTION1</Default>
+				<Options Type="number">	
+					<Item Name="MB_DEFOPTION1" Type="number" Value="0" Desc="Option button 1 is selected." />
+					<Item Name="MB_DEFOPTION2" Type="number" Value="256" Desc="Option button 2 is selected." />
+					<Item Name="MB_DEFOPTION3" Type="number" Value="512" Desc="Option button 3 is selected." />
+					<!--<Item Name="MB_DEFOPTION4" Type="number" Value="768" Desc="" /> (help button)-->
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is one of the following. &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>combo</SubType>
+			<Default>local nResult</Default>
+			<Options Type="number">			
+				<Item Name="IDOK" Type="number" Value="1" Desc="The OK button was selected." />
+				<Item Name="IDCANCEL" Type="number" Value="2" Desc="The Cancel button was selected ,Or user pressed the ESC key.," />
+				<Item Name="IDABORT" Type="number" Value="3" Desc="The Abort button was selected." />
+				<Item Name="IDRETRY" Type="number" Value="4" Desc="The Retry button was selected." />
+				<Item Name="IDIGNORE" Type="number" Value="5" Desc="The Ignore button was selected." />
+				<Item Name="IDYES" Type="number" Value="6" Desc="The Yes button was selected. " />
+				<Item Name="IDNO" Type="number" Value="7" Desc="The No button was selected." />
+				<!--<Item Name="IDCLOSE" Type="number" Value="8" Desc="" />
+				<Item Name="IDHELP" Type="number" Value="9" Desc="" />-->
+				<Item Name="IDTRYAGAIN" Type="number" Value="10" Desc="The Try Again button was selected." />
+				<Item Name="IDCONTINUE" Type="number" Value="11" Desc="The Continue button was selected." />
+				<!--<Item Name="IDTIMEOUT" Type="number" Value="32000" Desc="" />-->
+			</Options>
+        </Return>
+    </Function>
+	
+
+
+	
+
+
+
+</Functions>
+

@@ -1,0 +1,685 @@
+<Functions For="Tree" Desc="Functions For Tree Control">
+	<Function>
+        <Name>SetItemToolTip</Name>
+        <Desc>Sets the tooltip text of an item in the tree control.</Desc>
+        <Args>
+			 <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Item</Name>
+                <Desc>The handle of item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>			
+            </Arg>	
+			<Arg>
+                <Name>ToolTip</Name>
+                <Desc>The tooltip text of the item.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetItemData</Name>
+        <Desc>Sets the string data of an item in the tree control.</Desc>
+        <Args>
+			 <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Item</Name>
+                <Desc>The handle of item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>			
+            </Arg>	
+			<Arg>
+                <Name>Data</Name>
+                <Desc>The item data.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetItemText</Name>
+        <Desc>Sets the text of an item in the tree control.</Desc>
+        <Args>
+			 <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Item</Name>
+                <Desc>The handle of item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>			
+            </Arg>	
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The item text.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+<!--	<Function>
+        <Name>GetItem</Name>
+        <Desc>Gets the properties of an item in the tree control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains following fields . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblItem</Default>
+			<Options Type="table">
+				<Item Name="IconNormal" Type="number" Value="" Desc="The one-based index of the normal state icon for the item in the attached image list." />
+				<Item Name="IconSelected" Type="number" Value="" Desc="The one-based index of the selected state icon for the item in the attached image list." />
+				<Item Name="Text" Type="string" Value="" Desc="The text of the item." />
+				<Item Name="Data" Type="string" Value="" Desc="The string data of the item." />
+				<Item Name="ToolTip" Type="string" Value="" Desc="The tooltip text of the item." />
+				<Item Name="Selected" Type="boolean" Value="" Desc="The selection state of the item." />
+				<Item Name="Checked" Type="boolean" Value="" Desc="The checked state of the item." />
+			</Options>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>-->
+	<Function>
+        <Name>GetSelected</Name>
+        <Desc>Gets the selected item in a tree control.</Desc>
+        <Args>
+			 <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>	
+        </Args>
+        <Return>
+            <Desc>If the function succeeds and there is a selection, the return value is the numeric handle of the selected item . &#x0A;If the function fails, or there is no selection then the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local hItemSelected</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetSelected</Name>
+        <Desc>Selects an item in the tree control.</Desc>
+        <Args>
+			 <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Item</Name>
+                <Desc>The handle of item to select.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>			
+            </Arg>	
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>ExpandItem</Name>
+        <Desc>Expands or collapses a tree item if it has child items.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Item</Name>
+                <Desc>The handle of a tree item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Action</Name>
+                <Desc>The action to apply item.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>TVE_COLLAPSE</Default>
+				<Options Type="number">
+					<Item Name="TVE_COLLAPSE" Type="number" Value="1" Desc="Collapse specified item."/>
+					<Item Name="TVE_EXPAND" Type="number" Value="2" Desc="Expand specified item."/>
+					<Item Name="TVE_TOGGLE" Type="number" Value="3" Desc="Toggle current state of item."/>
+				</Options>				
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>EnsureVisible</Name>
+        <Desc>Ensures that a tree item is visible, expanding the parent item or scrolling the tree control, if necessary.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Item</Name>
+                <Desc>The handle of a tree item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>DeleteItem</Name>
+        <Desc>Removes an item and all its children from a tree control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Item</Name>
+                <Desc>The handle of a tree item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>InsertItem</Name>
+        <Desc>Inserts a new item to a tree control.</Desc>
+        <Args>
+			 <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The item text.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Data</Name>
+                <Desc>The string data for the item.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>ToolTip</Name>
+                <Desc>The tool tip text for the item.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Parent</Name>
+                <Desc>The handle of parent item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+				<Note Type="info" Title="Info">Set this argument to 0 for items without parent, For example first root item.</Note>
+            </Arg>	
+			<Arg>
+                <Name>InsertAfter</Name>
+                <Desc>The handle of the item to insert new item after.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>TVI_ROOT</Default>
+				<Options Type="number">
+					<Item Name="TVI_ROOT" Type="number" Value="-65536" Desc="Insert after root item."/>
+					<Item Name="TVI_FIRST" Type="number" Value="-65535" Desc="Insert as first child of parent item."/>
+					<Item Name="TVI_LAST" Type="number" Value="-65534" Desc="Insert as the last child of parent item."/>
+				</Options>
+				<Note Type="info" Title="Info">You can use predefined contants or specify handle of an existing item.</Note>				
+            </Arg>
+			<Arg>
+                <Name>IconNormal</Name>
+                <Desc>The one-based index of the icon for the item in the attached image list.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>-1</Default>
+				<Note Type="tip" Title="Tip">You can use -1 to insert item without icon.</Note>
+            </Arg>
+			<Arg>
+                <Name>IconSelected</Name>
+                <Desc>The one-based index of the icon for the item in the attached image list.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>-1</Default>
+				<Note Type="tip" Title="Tip">You can use -1 to insert item without icon.</Note>
+				<Note Type="warning" Title="Warning">If you specify an icon index for normal state and set selected icon as the -1 then icon no icon will be shown when item selected ,It is good to set same icon index with the normal state if you do not want to use a different icon for selected state.</Note>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the numeric handle of the new item . &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local hItem</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetImageList</Name>
+        <Desc>Sets the image list of a tree control.</Desc>
+        <Args>
+			 <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>ImageList</Name>
+                <Desc>A handle to the image list object.</Desc>
+                <Type>object</Type>
+				<SubType>ImageList</SubType>
+                <Default>nil</Default>
+				<Note Type="info" Title="Info">If this argument is nil then function removes previously assigned image list, But the image list itself will not be removed and can be used for other controls.</Note>
+            </Arg>
+			<Arg>
+                <Name>Type</Name>
+                <Desc>The type of the image list.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>LVSIL_NORMAL</Default>
+				<Options Type="number">
+					<Item Name="LVSIL_NORMAL" Type="number" Value="0" Desc="Indicates the normal image list, which contains selected, nonselected, images for the items of a tree control."/>
+					<Item Name="TVSIL_STATE" Type="number" Value="2" Desc="Indicates the state image list. You can use state images to indicate user defined item states. A state image is displayed to the left of an item's selected or nonselected image. "/>
+				</Options>		
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetSize</Name>
+        <Desc>Sets the display size of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Width</Name>
+                <Desc>The new width of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Height</Name>
+                <Desc>The new height of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetPosition</Name>
+        <Desc>Gets the display position of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (X , Y) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblPos</Default>
+			<Options Type="table">
+				<Item Name="X" Type="number" Value="" Desc="Specifies the x position of the control in pixels, Relative to the parent window's top-left corner." />
+				<Item Name="Y" Type="number" Value="" Desc="Specifies the y position of the control in pixels, Relative to the parent window's top-left corner." />
+			</Options>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>GetSize</Name>
+        <Desc>Gets the display size of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (Width , Height) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblSize</Default>
+			<Options Type="table">
+				<Item Name="Width" Type="number" Value="" Desc="Specifies the width of the control in pixels." />
+				<Item Name="Height" Type="number" Value="" Desc="Specifies the height of the control in pixels." />
+			</Options>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetPosition</Name>
+        <Desc>Sets the display position of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>X</Name>
+                <Desc>The new x position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Y</Name>
+                <Desc>The new y position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsEnabled</Name>
+        <Desc>Returns true if the specified control is enabled, and false if it is disabled.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>Returns true if the specified control is enabled, and false if it is disabled.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bEnabled</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetEnabled</Name>
+        <Desc>Sets whether the given control is to be enabled or disabled.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Enable</Name>
+                <Desc>If this parameter is true, the control will be enabled. If this parameter is false, the control will be disabled.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Enable specified control." />
+					<Item Name="false" Type="boolean" Value="" Desc="Disable specified control." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	
+	<Function>
+        <Name>IsVisible</Name>
+        <Desc>Returns true if the specified control is visible, and false if it is invisible.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>Returns true if the specified control is visible, and false if it is invisible.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bVisible</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetVisible</Name>
+        <Desc>Sets the visiblity state of the specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Visible</Name>
+                <Desc>The visibility state of the tree control.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Set control as visible. " />
+					<Item Name="false" Type="boolean" Value="" Desc="Set control as invisible." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>GetHwnd</Name>
+        <Desc>Gets the window handle of the specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the window handle of the control . &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local hWnd</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetRedraw</Name>
+        <Desc>Sets the redraw state whether or not the tree object will be redrawn to reflect any changes that have been made.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Redraw</Name>
+                <Desc>The redraw state of the tree control.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Tree control changes are immediately visible. " />
+					<Item Name="false" Type="boolean" Value="" Desc="Tree control changes are not visible until it's redraw state is enabled." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>DeleteAllItems</Name>
+        <Desc>Deletes all items in the tree control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Tree</Name>
+                <Desc>A handle to the tree object.</Desc>
+                <Type>object</Type>
+				<SubType>Tree</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+
+</Functions>
+

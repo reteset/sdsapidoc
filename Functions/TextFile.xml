@@ -1,0 +1,113 @@
+<Functions For="TextFile" Desc="Functions For TextFile Class">
+	<Function>
+        <Name>QuickAppend</Name>
+        <Desc>Appends a string to at the end of file.</Desc>
+		<Note Type="info" Title="Info">This function was intended to be used to create or update small text files.</Note>
+        <Args>
+			<Arg>
+                <Name>Encoding</Name>
+                <Desc>The encoding of the text to append to file.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>ENC_UTF8</Default>
+				<Options Type="number">
+					<Item Name="ENC_UNICODE" Type="number" Value="0" Desc="Apply UTF-16 (Unicode) encoding." />
+					<Item Name="ENC_UTF8" Type="number" Value="1" Desc="Apply UTF-8 encoding (recommended)." />
+					<Item Name="ENC_ANSI" Type="number" Value="2" Desc="Apply ANSI encoding with system default code page (not recomended)." />
+				</Options>
+            </Arg>			
+			<Arg>
+                <Name>File</Name>
+                <Desc>The path to a file, If file does not exist then it will be created, If file exist then text will be appended at the end of the file.</Desc>
+                <Type>string</Type>
+				<SubType>file</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The text string to be appended.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>			
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+			<Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>	
+	<Function>
+        <Name>QuickRead</Name>
+        <Desc>Opens a file and reads its text content.</Desc>
+		<Note Type="info" Title="Info">This function was intended to be used to open small text files.</Note>
+        <Args>
+			<Arg>
+                <Name>Encoding</Name>
+                <Desc>The encoding of the text in the file.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>ENC_UTF8</Default>
+				<Options Type="number">
+					<Item Name="ENC_UNICODE" Type="number" Value="0" Desc="Text file is UTF-16 (Unicode) encoded." />
+					<Item Name="ENC_UTF8" Type="number" Value="1" Desc="Text file is UTF-8 encoded." />
+					<Item Name="ENC_ANSI" Type="number" Value="2" Desc="Text file is ANSI encoded with system default code page." />
+				</Options>
+            </Arg>			
+			<Arg>
+                <Name>File</Name>
+                <Desc>The path to a text file.</Desc>
+                <Type>string</Type>
+				<SubType>file</SubType>
+                <Default>""</Default>
+            </Arg>			
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is the contents of the file. &#x0A;If the function fails, or text file is empty then the return value is empty string.</Desc>
+			<Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strText</Default>
+        </Return>
+    </Function>	
+	<Function>
+        <Name>QuickWrite</Name>
+        <Desc>Writes a string to a file.</Desc>
+		<Note Type="info" Title="Info">This function was intended to be used to create or update small text files.</Note>
+        <Args>
+			<Arg>
+                <Name>Encoding</Name>
+                <Desc>The encoding of the text to write to file.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>ENC_UTF8</Default>
+				<Options Type="number">
+					<Item Name="ENC_UNICODE" Type="number" Value="0" Desc="Apply UTF-16 (Unicode) encoding." />
+					<Item Name="ENC_UTF8" Type="number" Value="1" Desc="Apply UTF-8 encoding (recommended)." />
+					<Item Name="ENC_ANSI" Type="number" Value="2" Desc="Apply ANSI encoding with system default code page (not recomended)." />
+				</Options>
+            </Arg>			
+			<Arg>
+                <Name>File</Name>
+                <Desc>The path to a file, If file does not exist then it will be created, If file exist then it will be overwritten.</Desc>
+                <Type>string</Type>
+				<SubType>file</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The text string to be written.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>			
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+			<Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>	
+</Functions>
+

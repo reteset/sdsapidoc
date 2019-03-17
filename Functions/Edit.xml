@@ -1,0 +1,421 @@
+<Functions For="Edit" Desc="Functions For Edit Control">
+	<Function>
+        <Name>GetLine</Name>
+        <Desc>Gets the text at the specified line index in a multi-line edit control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListBox</Name>
+                <Desc>A handle to the listbox object.</Desc>
+                <Type>object</Type>
+				<SubType>ListBox</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>LineIndex</Name>
+                <Desc>The one-based index of the line.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is text of the specified line. &#x0A;If the function fails or specified line does not contain any text, the return value is "".</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strLineText</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>CanUndo</Name>
+        <Desc>Checks whether the undo stack of specified edit control contains undoable actions.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the undo stack of specified edit control contains any item, the return value is true. &#x0A;the return value is false otherwise.</Desc>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+			<Default>local bSucceed</Default>
+			<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="There are at least one undoable action in the undo stack." />
+					<Item Name="false" Type="boolean" Value="" Desc="There is no undoable action in the undo stack." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Undo</Name>
+        <Desc>Pastes text from the clipboard into the edit control at the caret position.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Paste</Name>
+        <Desc>Pastes text from the clipboard into the edit control at the caret position.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Copy</Name>
+        <Desc>Copies text to the clipboard unless the input style is PASSWORD, in which case the message returns false.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Cut</Name>
+        <Desc>Cuts the selection to the clipboard, or deletes the character to the left of the cursor if there is no selection.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetText</Name>
+        <Desc>Gets the text of an edit control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is text string of the specified edit control. &#x0A;If the function fails or edit control does not contain any text, the return value is "".</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strText</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetText</Name>
+        <Desc>Sets the text of an edit control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The new edit text.</Desc>
+                <Type>string</Type>
+				<SubType>multiline</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetSize</Name>
+        <Desc>Sets the display size of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Width</Name>
+                <Desc>The new width of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Height</Name>
+                <Desc>The new height of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetPosition</Name>
+        <Desc>Gets the display position of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (X , Y) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblPos</Default>
+			<Options Type="table">
+				<Item Name="X" Type="number" Value="" Desc="Specifies the x position of the control in pixels, Relative to the parent window's top-left corner." />
+				<Item Name="Y" Type="number" Value="" Desc="Specifies the y position of the control in pixels, Relative to the parent window's top-left corner." />
+			</Options>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>GetSize</Name>
+        <Desc>Gets the display size of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (Width , Height) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblSize</Default>
+			<Options Type="table">
+				<Item Name="Width" Type="number" Value="" Desc="Specifies the width of the control in pixels." />
+				<Item Name="Height" Type="number" Value="" Desc="Specifies the height of the control in pixels." />
+			</Options>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetPosition</Name>
+        <Desc>Sets the display position of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>X</Name>
+                <Desc>The new x position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Y</Name>
+                <Desc>The new y position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsEnabled</Name>
+        <Desc>Returns true if the specified control is enabled, and false if it is disabled.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>Returns true if the specified control is enabled, and false if it is disabled.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bEnabled</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetEnabled</Name>
+        <Desc>Sets whether the given control is to be enabled or disabled.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Enable</Name>
+                <Desc>If this parameter is true, the control will be enabled. If this parameter is false, the control will be disabled.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Enable specified control." />
+					<Item Name="false" Type="boolean" Value="" Desc="Disable specified control." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	
+	<Function>
+        <Name>IsVisible</Name>
+        <Desc>Returns true if the specified control is visible, and false if it is invisible.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>Returns true if the specified control is visible, and false if it is invisible.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bVisible</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetVisible</Name>
+        <Desc>Sets the visiblity state of the specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Visible</Name>
+                <Desc>The visibility state of the edit control.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Set control as visible. " />
+					<Item Name="false" Type="boolean" Value="" Desc="Set control as invisible." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>GetHwnd</Name>
+        <Desc>Gets the window handle of the specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Edit</Name>
+                <Desc>A handle to the edit object.</Desc>
+                <Type>object</Type>
+				<SubType>Edit</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the window handle of the control . &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local hWnd</Default>
+        </Return>
+    </Function>
+</Functions>
+

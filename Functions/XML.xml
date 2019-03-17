@@ -1,0 +1,292 @@
+<Functions For="XML" Desc="Functions For XML Class">
+	<Function>
+        <Name>GetAttributes</Name>
+        <Desc>Gets the attributes of an xml element.</Desc>
+        <Args>
+			<Arg>
+                <Name>Element</Name>
+                <Desc>A handle to the xml element.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is a table that contains attributes of the element as name value pairs . &#x0A;If the function fails,or there is no attribute then the return value is nil .</Desc>
+			<Type>table</Type>
+            <SubType>none</SubType>
+			<Default>local tblAttribs</Default>
+        </Return>
+    </Function>
+<!--	<Function>
+        <Name>GetTabSize</Name>
+        <Desc>Gets the tab size of an xml document object.</Desc>
+        <Args>
+			<Arg>
+                <Name>XML</Name>
+                <Desc>A handle to the xml document object.</Desc>
+                <Type>object</Type>
+				<SubType>XML</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is the tab size of document. &#x0A;If the function fails, the return value is -1.</Desc>
+			<Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local nTabSize</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetTabSize</Name>
+        <Desc>Sets the tab size (indentation) when saving xml document object to file.</Desc>
+        <Args>
+			<Arg>
+                <Name>XML</Name>
+                <Desc>A handle to the xml document object.</Desc>
+                <Type>object</Type>
+				<SubType>XML</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>TabSize</Name>
+                <Desc>The tab size default value is 4.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>4</Default>
+            </Arg>
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+			<Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>-->
+	<Function>
+        <Name>GetAttribute</Name>
+        <Desc>Gets the value of an attribute of an xml element.</Desc>
+        <Args>
+			<Arg>
+                <Name>Element</Name>
+                <Desc>A handle to the xml element.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Name</Name>
+                <Desc>The name of the attribute.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is the value of the attribute. &#x0A;If the function fails, the return value is empty string .</Desc>
+			<Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strAttrib</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetAttribute</Name>
+        <Desc>Sets the value of an attribute of an xml element ,If attribute does not exist then a new attribute will be created with the given name.</Desc>
+        <Args>
+			<Arg>
+                <Name>Element</Name>
+                <Desc>A handle to the xml element.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Name</Name>
+                <Desc>The name of the attribute.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Value</Name>
+                <Desc>The value of the attribute.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+			<Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SaveToFile</Name>
+        <Desc>Saves an xml document object to a file.</Desc>
+        <Args>
+			<Arg>
+                <Name>XML</Name>
+                <Desc>A handle to the xml document object.</Desc>
+                <Type>object</Type>
+				<SubType>XML</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>File</Name>
+                <Desc>Full path to the file.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+			<Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<!--<Function>
+        <Name>DocToElement</Name>
+        <Desc>Converts a xml document object to an element.</Desc>
+        <Args>
+			<Arg>
+                <Name>XML</Name>
+                <Desc>A handle to the xml document object.</Desc>
+                <Type>object</Type>
+				<SubType>XML</SubType>
+                <Default>nil</Default>
+            </Arg>
+		</Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the handle of converted xml element. &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local hElement</Default>
+        </Return>
+    </Function>-->
+	<Function>
+        <Name>InsertEndChild</Name>
+        <Desc>Inserts a new child element to specified parent element.</Desc>
+        <Args>
+			<Arg>
+                <Name>Element</Name>
+                <Desc>A handle to the xml element or document object.</Desc>
+                <Type>variant</Type>
+				<SubType>none</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Name</Name>
+                <Desc>The name of the element.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Value</Name>
+                <Desc>The value of the element, The type of value defined with the ValueType argument, Default type is empty which means an element without any value.</Desc>
+                <Type>variant</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>ValueType</Name>
+                <Desc>The type of the value.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>XML_VTYPE_PLAIN</Default>
+				<Options Type="number">
+					<Item Name="XML_VTYPE_EMPTY" Type="number" Value="0" Desc="Value type is plain text." />
+					<Item Name="XML_VTYPE_PLAIN" Type="number" Value="1" Desc="Value type is plain text." />
+					<Item Name="XML_VTYPE_CDATA" Type="number" Value="2" Desc="Value type is CDATA text, enclosed within CDATA block." />
+					<Item Name="XML_VTYPE_XML" Type="number" Value="3" Desc="Value type is xml text. The text will be parsed as an xml doc and will be added as the child element(s) of the element that is being created." />
+					<Item Name="XML_VTYPE_ELEMENT" Type="number" Value="4" Desc="Value type is an existing xml element , this can also be an element from another xml document object." />
+					<!--<Item Name="XML_VTYPE_BIN" Type="number" Value="5" Desc="Value type is binary data , Binary data will be converted to a text format and then added as value." />-->
+				</Options>
+            </Arg>
+			
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the handle of inserted xml element. &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local hElement</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>NewDocument</Name>
+        <Desc>Creates a new xml document object.</Desc>
+        <Args />
+         <Return>
+            <Desc>If the function succeeds, the return value is the handle of xml document object. &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>object</Type>
+            <SubType>XML</SubType>
+			<Default>local hXmlDoc</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>LoadFile</Name>
+        <Desc>Loads a file into xml document object.</Desc>
+        <Args>
+			<Arg>
+                <Name>XML</Name>
+                <Desc>A handle to the xml document object.</Desc>
+                <Type>object</Type>
+				<SubType>XML</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>File</Name>
+                <Desc>Full path to the file.</Desc>
+                <Type>string</Type>
+				<SubType>file</SubType>
+                <Default>""</Default>
+				<Options Type="File">
+					<Item Name="Title" Type="string" Value="Browse for file" />
+					<Item Name="Source" Type="string" Value="WorkingDir" />
+					<Item Name="Origin" Type="string" Value="Application" />
+					<Item Name="Target" Type="string" Value="Data" />
+					<Item Name="DefaultExtension" Type="string" Value=".xml" />
+					<Item Name="Filter" Type="string" Value="XML Files (*.xml)|*.xml|All Files (*.*)|*.*|" />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+			<Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>LoadString</Name>
+        <Desc>Loads a xml string into xml document object.</Desc>
+        <Args>
+			<Arg>
+                <Name>XML</Name>
+                <Desc>A handle to the xml document object.</Desc>
+                <Type>object</Type>
+				<SubType>XML</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>XmlText</Name>
+                <Desc>The xml string to parse.</Desc>
+                <Type>string</Type>
+				<SubType>multiline</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+			<Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	
+</Functions>
+

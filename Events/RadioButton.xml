@@ -1,0 +1,34 @@
+<Events For="RadioButton" Desc="Events For RadioButton Control">
+	<Event>
+		<Name>OnLeftClick</Name>
+		<Desc>Fires when the left mouse button is clicked in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>RadioButton</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>RadioButton</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Checked</Name>
+				<Var>e_Checked</Var>
+				<Type>boolean</Type>
+				<SubType>combo</SubType>
+				<Desc>The checked state of the radio button control.</Desc>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="The radio button is in checked state." />
+					<Item Name="false" Type="boolean" Value="" Desc="The radio button is in unchecked state." />
+				</Options>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+</Events>

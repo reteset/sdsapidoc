@@ -1,0 +1,306 @@
+<!--
+Lua Types:
+LUA_TNIL			0 nil
+LUA_TBOOLEAN		1 boolean
+LUA_TLIGHTUSERDATA	2 lightuserdata
+LUA_TNUMBER			3 number
+LUA_TSTRING			4 string
+LUA_TTABLE			5 table
+LUA_TFUNCTION		6 function
+LUA_TUSERDATA		7 userdata
+LUA_TTHREAD			8 thread
+-->
+
+<Events For="DateTimePicker" Desc="Events For DateTimePicker">
+	<Event>
+		<Name>OnDateTimeChange</Name>
+		<Desc>Fires whenever a change occurs in a datetime picker control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>DateTimePicker</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>DateTimePicker</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Year</Name>
+				<Var>e_Year</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Year of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Month</Name>
+				<Var>e_Month</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Month of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Day</Name>
+				<Var>e_Day</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Day of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Hour</Name>
+				<Var>e_Hour</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Hour of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Minute</Name>
+				<Var>e_Minute</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Minute of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Second</Name>
+				<Var>e_Second</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Second of the selected date.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnCloseUp</Name>
+		<Desc>Fires when the user closes the drop down calendar of a datetime picker control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>DateTimePicker</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>DateTimePicker</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Year</Name>
+				<Var>e_Year</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Year of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Month</Name>
+				<Var>e_Month</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Month of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Day</Name>
+				<Var>e_Day</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Day of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Hour</Name>
+				<Var>e_Hour</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Hour of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Minute</Name>
+				<Var>e_Minute</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Minute of the selected date.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Second</Name>
+				<Var>e_Second</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Second of the selected date.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnDropDown</Name>
+		<Desc>Fires when the drop down calendar of a datetime picker control has been dropped down.</Desc>	
+		<Args>
+			<Arg>
+				<Name>DateTimePicker</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>DateTimePicker</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnLButtonUp</Name>
+		<Desc>Fires when the left mouse button is up (released) in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>DateTimePicker</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>DateTimePicker</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnLButtonDown</Name>
+		<Desc>Fires when the left mouse button is down in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>DateTimePicker</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>DateTimePicker</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnRButtonUp</Name>
+		<Desc>Fires when the right mouse button is up (released) in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>DateTimePicker</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>DateTimePicker</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnRButtonDown</Name>
+		<Desc>Fires when the right mouse button is down in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>DateTimePicker</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>DateTimePicker</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>none</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+</Events>

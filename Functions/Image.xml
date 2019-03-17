@@ -1,0 +1,104 @@
+<Functions For="Image"> 
+<!--
+    <Function>
+        <Name>New</Name>
+        <Desc>Creates a new image object in the memnory.</Desc>
+        <Args/>
+        <Return>
+            <Desc>If the function succeeds, the return value is a new image object. &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>object</Type>
+            <SubType>Image</SubType>	
+        </Return>
+    </Function>
+	<Function>
+        <Name>Delete</Name>
+        <Desc>Deletes an image object from the memory.</Desc>
+        <Args>
+            <Arg>
+                <Name>ImageObject</Name>
+                <Desc>A handle to the image object.</Desc>
+                <Type>object</Type>
+				<SubType>Image</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+        </Return>
+    </Function>
+	
+    <Function>
+        <Name>Destroy</Name>
+        <Desc>Destroys an image object.</Desc>
+        <Args>
+            <Arg>
+                <Name>Object</Name>
+                <Desc>A handle to the button control.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>number</SubType>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+        </Return>
+    </Function>
+    <Function>
+        <Name>Create</Name>
+        <Desc>Creates a button control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Parent</Name>
+                <Desc>A handle to the parent window of the button control being created.</Desc>
+                <Type>number</Type>
+                <Default>Application.WindowHandle()</Default>
+                <SubType>number</SubType>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The text of button control.</Desc>
+                <Type>string</Type>
+                <Default>""</Default>
+                <SubType>multiline</SubType>
+            </Arg>
+			<Arg>
+                <Name>X</Name>
+                <Desc>The x position of the control.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>number</SubType>
+            </Arg>
+            <Arg>
+                <Name>Y</Name>
+                <Desc>The y position of the control.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>number</SubType>
+            </Arg>
+            <Arg>
+                <Name>Width</Name>
+                <Desc>The width of the control.</Desc>
+                <Type>number</Type>
+                <Default>100</Default>
+                <SubType>number</SubType>
+            </Arg>
+            <Arg>
+                <Name>Height</Name>
+                <Desc>The height of the control.</Desc>
+                <Type>number</Type>
+                <Default>25</Default>
+                <SubType>number</SubType>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a handle to the new button control. &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>number</SubType>
+        </Return>
+    </Function>-->
+</Functions>
+

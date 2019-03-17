@@ -1,0 +1,342 @@
+<Functions For="BounceButton" Desc="Functions For Bounce Button Control">
+	<Function>
+        <Name>GetTooltipText</Name>
+        <Desc>Gets the tooltip text of a bounce button control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is tootip text of the specified  bounce button control. &#x0A;If the function fails or  bounce button control does not contain any tooltip text, the return value is "".</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strText</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetTooltipText</Name>
+        <Desc>Sets the tooltip text of a  bounce button control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>ToolTip</Name>
+                <Desc>The new tooltip text. Maximum allowed ToolTip is 80 characters.</Desc>
+                <Type>string</Type>
+				<SubType>multiline</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	
+	<Function>
+        <Name>GetText</Name>
+        <Desc>Gets the text of a  bounce button control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is text string of the specified  bounce button control. &#x0A;If the function fails or  bounce button control does not contain any text, the return value is "".</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strText</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetText</Name>
+        <Desc>Sets the text of a  bounce button control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The new  bounce button text.</Desc>
+                <Type>string</Type>
+				<SubType>multiline</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetSize</Name>
+        <Desc>Sets the display size of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Width</Name>
+                <Desc>The new width of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Height</Name>
+                <Desc>The new height of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetPosition</Name>
+        <Desc>Gets the display position of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (X , Y) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblPos</Default>
+			<Options Type="table">
+				<Item Name="X" Type="number" Value="" Desc="Specifies the x position of the control in pixels, Relative to the parent window's top-left corner." />
+				<Item Name="Y" Type="number" Value="" Desc="Specifies the y position of the control in pixels, Relative to the parent window's top-left corner." />
+			</Options>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>GetSize</Name>
+        <Desc>Gets the display size of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (Width , Height) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblSize</Default>
+			<Options Type="table">
+				<Item Name="Width" Type="number" Value="" Desc="Specifies the width of the control in pixels." />
+				<Item Name="Height" Type="number" Value="" Desc="Specifies the height of the control in pixels." />
+			</Options>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetPosition</Name>
+        <Desc>Sets the display position of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>X</Name>
+                <Desc>The new x position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Y</Name>
+                <Desc>The new y position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsEnabled</Name>
+        <Desc>Returns true if the specified control is enabled, and false if it is disabled.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>Returns true if the specified control is enabled, and false if it is disabled.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bEnabled</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetEnabled</Name>
+        <Desc>Sets whether the given control is to be enabled or disabled.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Enable</Name>
+                <Desc>If this parameter is true, the control will be enabled. If this parameter is false, the control will be disabled.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Enable specified control." />
+					<Item Name="false" Type="boolean" Value="" Desc="Disable specified control." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	
+	<Function>
+        <Name>IsVisible</Name>
+        <Desc>Returns true if the specified control is visible, and false if it is invisible.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>Returns true if the specified control is visible, and false if it is invisible.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bVisible</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetVisible</Name>
+        <Desc>Sets the visiblity state of the specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Visible</Name>
+                <Desc>The visibility state of the  bounce button control.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Set control as visible. " />
+					<Item Name="false" Type="boolean" Value="" Desc="Set control as invisible." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>GetHwnd</Name>
+        <Desc>Gets the window handle of the specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>BounceButton</Name>
+                <Desc>A handle to the  bounce button object.</Desc>
+                <Type>object</Type>
+				<SubType>BounceButton</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the window handle of the control . &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local hWnd</Default>
+        </Return>
+    </Function>
+</Functions>
+

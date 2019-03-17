@@ -1,0 +1,187 @@
+<Functions For="Menu" Desc="Functions For Menu Class">
+	<Function>
+        <Name>AppendPopup</Name>
+        <Desc>Assigns a menu to a window.</Desc>
+        <Args>
+			<Arg>
+                <Name>Menu</Name>
+                <Desc>A handle to the parent menu object.</Desc>
+                <Type>object</Type>
+				<SubType>Menu</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Menu</Name>
+                <Desc>A handle to the popup (sub) menu object.</Desc>
+                <Type>object</Type>
+				<SubType>Menu</SubType>
+                <Default>nil</Default>
+            </Arg>	
+        </Args>
+		<Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetToWindow</Name>
+        <Desc>Assigns a menu to a window.</Desc>
+        <Args>
+			<Arg>
+                <Name>Menu</Name>
+                <Desc>A handle to the menu object.</Desc>
+                <Type>object</Type>
+				<SubType>Menu</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the parent window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>	
+        </Args>
+		<Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>ShowPopupMenu</Name>
+        <Desc>Shows a popup menu at the specified position.</Desc>
+        <Args>
+			<Arg>
+                <Name>Menu</Name>
+                <Desc>A handle to the menu object.</Desc>
+                <Type>object</Type>
+				<SubType>Menu</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the parent window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>X</Name>
+                <Desc>X position to show popup menu.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Y</Name>
+                <Desc>Y position to show popup menu.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the command ID of the selected menu item. &#x0A;If the function fails, or nothing selected then return value is -1.</Desc>
+            <Type>number</Type>
+            <SubType>number</SubType>
+			<Default>local nCommandID</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>CreateMenu</Name>
+        <Desc>Creates a new menu bar.</Desc>
+        <Args/>
+         <Return>
+            <Desc>If the function succeeds, the return value is the handle of menu object. &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>object</Type>
+            <SubType>Menu</SubType>
+			<Default>local hMenuBar</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>CreatePopupMenu</Name>
+        <Desc>Creates a new popup menu.</Desc>
+        <Args/>
+         <Return>
+            <Desc>If the function succeeds, the return value is the handle of menu object. &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>object</Type>
+            <SubType>Menu</SubType>
+			<Default>local hPopupMenu</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>AppendItem</Name>
+        <Desc>Appends a menu item to an existing menu.</Desc>
+        <Args>
+			<Arg>
+                <Name>Menu</Name>
+                <Desc>A handle to the menu object.</Desc>
+                <Type>object</Type>
+				<SubType>Menu</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Type</Name>
+                <Desc>The type of the new menu item.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>MIT_NORMAL</Default>
+				<Options Type="number">
+					<Item Name="MIT_NORMAL" Type="number" Value="0" Desc="Menu item contains text only."/>
+					<Item Name="MIT_RADIO" Type="number" Value="1" Desc="Menu item contains a radio button and text next to the it."/>
+					<Item Name="MIT_CHECKBOX" Type="number" Value="2" Desc="Menu item contains a checkbox and text next to the it."/>
+					<Item Name="MIT_SEPERATOR" Type="number" Value="3" Desc="Menu item appears as a seperator."/>
+				</Options>
+            </Arg>
+			<Arg>
+                <Name>ID</Name>
+                <Desc>The command id of the new menu item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>100</Default>
+				
+				<Note Type="warning" Title="Warning">Please keep command id value in range of ( 0 - 65535 )</Note>
+				<Note Type="info" Title="Info">Same command id can be used for multiple items for shortcuts etc.. ,But please make sure that you have not done that accidentally.</Note>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The new menu item text.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>"New Item"</Default>
+            </Arg>
+			<Arg>
+                <Name>Checked</Name>
+                <Desc>If new item has a radio or checkbox style then this defines its checked state , This argument is ignored otherwise.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Menu item is checked." />
+					<Item Name="false" Type="boolean" Value="" Desc="Menu item is unchecked." />
+				</Options>
+            </Arg>
+			<Arg>
+                <Name>Enabled</Name>
+                <Desc>If this argument is true, the menu item will be enabled. If this argument is false, the menu item will be disabled.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Enable new menu item." />
+					<Item Name="false" Type="boolean" Value="" Desc="Disable new menu item." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>	
+</Functions>

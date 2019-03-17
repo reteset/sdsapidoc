@@ -1,0 +1,119 @@
+<Functions For="Application">
+	<Function>
+        <Name>SetLayoutRTL</Name>
+        <Desc>Sets the reading order of the application.</Desc>
+		<Note Type="info" Title="Info">This function is meaningful if the application developed for the languages that are read as Right To Left , Such as Herbew,Arabic,Persian.</Note>
+		<Note Type="warning" Title="Warning">Right To Left (RTL) layout is incompatible with auto-resize feature.</Note>
+		<Note Type="tip" Title="Tip">It is recomended to set reading order in design time on the project settings.</Note>
+        <Args>
+			<Arg>
+                <Name>Layout</Name>
+                <Desc>If this parameter is true, the RTL layout will be used , if this parameter is false, LTR layout will be used.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Set application reading order as Right To Left (RTL)." />
+					<Item Name="false" Type="boolean" Value="" Desc="Set application reading order is Left To Right (LTR)." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsLayoutRTL</Name>
+        <Desc>Retrieves whether the application reading order is Right To Left.</Desc>
+        <Args/>
+        <Return>
+            <Desc>If the application wide reading order is the Right To Left, the return value is true. &#x0A;The return value is false otherwise.</Desc>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+			<Default>local bIsRTL</Default>
+			<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Application reading order is Right To Left (RTL)." />
+					<Item Name="false" Type="boolean" Value="" Desc="Application reading order is Left To Right (LTR)." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Exit</Name>
+        <Desc>Terminates the application.</Desc>
+        <Args>
+			<Arg>
+                <Name>ExitCode</Name>
+                <Desc>The application's exit code.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+				<Note Type="tip" Title="Tip">This argument is meaningful if this application was launced by another application.</Note>
+				<Note Type="tip" Title="Tip">The value of 0 usually means success , any other value indicates an error.</Note>
+            </Arg>
+		</Args>
+        <Return/>
+    </Function>
+	<Function>
+        <Name>Is64Bit</Name>
+        <Desc>Retrieves whether the application was built for 64Bits environment or 32Bits environment.</Desc>
+        <Args/>
+        <Return>
+             <Desc>If the application built with X64 configuration , the return value is true. &#x0A;If the application built with X86 configuration, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+			<Default>local bIs64Bit</Default>
+			<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Application built with 64 Bits configuration." />
+					<Item Name="false" Type="boolean" Value="" Desc="Application built with 32 Bits configuration." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>ShowMessage</Name>
+        <Desc>Shows a simple messagebox.</Desc>
+        <Args>
+			<Arg>
+                <Name>Title</Name>
+                <Desc>Title of the message.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default />
+            </Arg>
+            <Arg>
+                <Name>Text</Name>
+                <Desc>Text of the message.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default />
+            </Arg>
+        </Args>
+        <Return/>
+    </Function>
+    <Function>
+        <Name>SourceFolder</Name>
+        <Desc>Returns the path of folder where application runs from.</Desc>
+        <Args/>
+        <Return>
+            <Desc>If the function succeeds, the return value is the path of folder where application runs from. &#x0A;If the function fails, the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>string</SubType>
+			<Default>local strAppFolder</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>WindowHandle</Name>
+        <Desc>Returns the handle of main window.</Desc>
+        <Args/>
+        <Return>
+            <Desc>If the function succeeds, the return value is the handle of main window. &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>number</SubType>
+			<Default>local hAppWnd</Default>
+        </Return>
+    </Function>
+</Functions>
+
+

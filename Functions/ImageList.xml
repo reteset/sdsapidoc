@@ -1,0 +1,88 @@
+<Functions For="ImageList" Desc="Functions For ImageList Class">
+	<Function>
+        <Name>AddIcon</Name>
+        <Desc>Adds a new icon from an ICO file.</Desc>
+        <Args>
+			<Arg>
+                <Name>ImageList</Name>
+                <Desc>A handle to the image list object.</Desc>
+                <Type>object</Type>
+				<SubType>ImageList</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>File</Name>
+                <Desc>Full path to an ICO file.</Desc>
+                <Type>string</Type>
+				<SubType>file</SubType>
+                <Default>""</Default>
+				<Options Type="File">
+					<Item Name="Title" Type="string" Value="Browse for file" />
+					<Item Name="Source" Type="string" Value="WorkingDir" />
+					<Item Name="Origin" Type="string" Value="Application" />
+					<Item Name="Target" Type="string" Value="Icons" />
+					<Item Name="DefaultExtension" Type="string" Value=".ico" />
+					<Item Name="Filter" Type="string" Value="Icon Files (*.ico)|*.ico|" />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+			<Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+			<Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>CreateNew</Name>
+        <Desc>Creates a new image list.</Desc>
+        <Args>
+			<Arg>
+                <Name>Width</Name>
+                <Desc>The width of a single icon in the image list.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>16</Default>
+            </Arg>
+			<Arg>
+                <Name>Height</Name>
+                <Desc>The height of a single icon in the image list.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>16</Default>
+            </Arg>
+			<Arg>
+                <Name>BitDeph</Name>
+                <Desc>The bit deph of the image list.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>ILC_COLOR32</Default>
+				<Options Type="number">
+					<Item Name="ILC_COLOR4" Type="number" Value="4" Desc="Image list resolution is 4 bits per pixel."/>
+					<Item Name="ILC_COLOR8" Type="number" Value="8" Desc="Image list resolution is 8 bits per pixel."/>
+					<Item Name="ILC_COLOR16" Type="number" Value="16" Desc="Image list resolution is 16 bits per pixel."/>
+					<Item Name="ILC_COLOR24" Type="number" Value="24" Desc="Image list resolution is 24 bits per pixel."/>
+					<Item Name="ILC_COLOR32" Type="number" Value="32" Desc="Image list resolution is 32 bits per pixel."/>
+				</Options>
+				<Note Type="tip" Title="Tip">Select ILC_COLOR32 for the icons with alpha channel.</Note>
+            </Arg>
+			<Arg>
+                <Name>TransColor</Name>
+                <Desc>Transparent color for the bitmap based image lists.</Desc>
+                <Type>number</Type>
+				<SubType>color</SubType>
+                <Default>-1</Default>
+				<Note Type="tip" Title="Tip">Set this to -1 for ICO based image lists.</Note>
+				<Note Type="tip" Title="Tip">If this argument is -1 then left-top pixel will be used as the transparent color for the bitmap images .</Note>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is the handle of image list object. &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>object</Type>
+            <SubType>ImageList</SubType>
+			<Default>local hImageList</Default>
+        </Return>
+    </Function>
+	
+</Functions>
+

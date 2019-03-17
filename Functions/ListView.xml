@@ -1,0 +1,661 @@
+<Functions For="ListView" Desc="Functions For ListView Control">
+	<Function>
+        <Name>InsertColumn</Name>
+        <Desc>Inserts a new column to a listview control.</Desc>
+		<Note Type="tip" Title="Tip">Column headers are visible only in report view style.</Note>
+        <Args>
+			 <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The one-based index of the new column.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The new column text.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>	
+			<Arg>
+                <Name>TextAlign</Name>
+                <Desc>The alignment of the column text.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>LVCFMT_LEFT</Default>
+				<Options Type="number">
+					<Item Name="LVCFMT_LEFT" Type="number" Value="0" Desc="Column text is left aligned."/>
+					<Item Name="LVCFMT_RIGHT" Type="number" Value="1" Desc="Column text is right aligned."/>
+					<Item Name="LVCFMT_CENTER" Type="number" Value="2" Desc="Column text is center aligned."/>
+					<!--<Item Name="LVCFMT_JUSTIFYMASK" Type="number" Value="3" Desc="?"/>-->
+				</Options>		
+            </Arg>
+			<Arg>
+                <Name>Width</Name>
+                <Desc>The width of the column.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>-1</Default>
+				<Note Type="info" Title="Info">This argument is meaningful only if tile view style is in use.</Note>
+            </Arg>
+			<Arg>
+                <Name>SubItem</Name>
+                <Desc>The one-based index of the sub item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>-1</Default>
+				<Note Type="info" Title="Info">This argument is meaningful only if tile view style is in use.</Note>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the one-based index of the new column . &#x0A;If the function fails, the return value is -1.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local nIndex</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetTileItemLineCount</Name>
+        <Desc>Sets the line (sub-item) count of an item in specified listview control with tile view style.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The one-based index of the item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>
+			<Arg>
+                <Name>LineCount</Name>
+                <Desc>The number of lines of tile item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetTileLineCount</Name>
+        <Desc>Sets the line (sub-item) count of the items in specified listview control with tile view style.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Lines</Name>
+                <Desc>The number of lines of the items.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetImageList</Name>
+        <Desc>Sets the image list of a listview control.</Desc>
+        <Args>
+			 <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>ImageList</Name>
+                <Desc>A handle to the image list object.</Desc>
+                <Type>object</Type>
+				<SubType>ImageList</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Type</Name>
+                <Desc>The type of the image list.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>LVSIL_NORMAL</Default>
+				<Options Type="number">
+					<Item Name="LVSIL_NORMAL" Type="number" Value="0" Desc="Image list with large icons."/>
+					<Item Name="LVSIL_SMALL" Type="number" Value="1" Desc="Image list with small icons."/>
+					<!--<Item Name="LVSIL_STATE" Type="number" Value="2" Desc="Image list with state images."/>-->
+				</Options>		
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetItemData</Name>
+        <Desc>Gets the data of an item in specified listview control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The one-based index of the item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is data string of the specified item. &#x0A;If the function fails or item does not contain any data, the return value is "".</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strItemData</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetItemText</Name>
+        <Desc>Gets the text of an item in specified listview control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The one-based index of the item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is text string of the specified item. &#x0A;If the function fails or item does not contain any text, the return value is "".</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strItemText</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetItemData</Name>
+        <Desc>Sets the data of an item in specified listview control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The one-based index of the item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>
+			<Arg>
+                <Name>Data</Name>
+                <Desc>The new item data.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetItemText</Name>
+        <Desc>Sets the text of an item in specified listview control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The one-based index of the item.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>
+			<Arg>
+                <Name>SubItem</Name>
+                <Desc>The one-based index of the sub item to set sub item text for report and tile view styles.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The new item or sub item text.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetSize</Name>
+        <Desc>Sets the display size of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Width</Name>
+                <Desc>The new width of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Height</Name>
+                <Desc>The new height of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetPosition</Name>
+        <Desc>Gets the display position of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (X , Y) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblPos</Default>
+			<Options Type="table">
+				<Item Name="X" Type="number" Value="" Desc="Specifies the x position of the control in pixels, Relative to the parent window's top-left corner." />
+				<Item Name="Y" Type="number" Value="" Desc="Specifies the y position of the control in pixels, Relative to the parent window's top-left corner." />
+			</Options>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>GetSize</Name>
+        <Desc>Gets the display size of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (Width , Height) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblSize</Default>
+			<Options Type="table">
+				<Item Name="Width" Type="number" Value="" Desc="Specifies the width of the control in pixels." />
+				<Item Name="Height" Type="number" Value="" Desc="Specifies the height of the control in pixels." />
+			</Options>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetPosition</Name>
+        <Desc>Sets the display position of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>X</Name>
+                <Desc>The new x position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Y</Name>
+                <Desc>The new y position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsEnabled</Name>
+        <Desc>Returns true if the specified control is enabled, and false if it is disabled.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>Returns true if the specified control is enabled, and false if it is disabled.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bEnabled</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetEnabled</Name>
+        <Desc>Sets whether the given control is to be enabled or disabled.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Enable</Name>
+                <Desc>If this parameter is true, the control will be enabled. If this parameter is false, the control will be disabled.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Enable specified control." />
+					<Item Name="false" Type="boolean" Value="" Desc="Disable specified control." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	
+	<Function>
+        <Name>IsVisible</Name>
+        <Desc>Returns true if the specified control is visible, and false if it is invisible.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>Returns true if the specified control is visible, and false if it is invisible.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bVisible</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetVisible</Name>
+        <Desc>Sets the visiblity state of the specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Visible</Name>
+                <Desc>The visibility state of the listview control.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Set control as visible. " />
+					<Item Name="false" Type="boolean" Value="" Desc="Set control as invisible." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>GetHwnd</Name>
+        <Desc>Gets the window handle of the specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the window handle of the control . &#x0A;If the function fails, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local hWnd</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetCurSel</Name>
+        <Desc>Selects an item in the listview.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The one-based index of the item to select.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>-1</Default>
+				<Note Type="tip" Title="Tip">You can use -1 to clear previous selection.</Note>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>none</SubType>
+        </Return>
+		<ErrorCodes>
+			<Item Code=""></Item>
+			<Item Code=""></Item>
+			<Item Code=""></Item>
+			<Item Code=""></Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>SetRedraw</Name>
+        <Desc>Sets the redraw state whether or not the listview object will be redrawn to reflect any changes that have been made.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Redraw</Name>
+                <Desc>The redraw state of the listview control.</Desc>
+                <Type>boolean</Type>
+				<SubType>combo</SubType>
+                <Default>true</Default>
+				<Options Type="boolean">
+					<Item Name="true" Type="boolean" Value="" Desc="Control changes are immediately visible. " />
+					<Item Name="false" Type="boolean" Value="" Desc="Control changes are not visible until it's redraw state is enabled." />
+				</Options>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+		<ErrorCodes>
+			<Item Code="13222424">Specified Object does not exist or destroyed</Item>
+		</ErrorCodes>
+    </Function>
+	<Function>
+        <Name>DeleteAllItems</Name>
+        <Desc>Deletes all items in the listview.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>AddItem</Name>
+        <Desc>Adds an item to listview and returns its index.</Desc>
+        <Args>
+            <Arg>
+                <Name>ListView</Name>
+                <Desc>A handle to the listview object.</Desc>
+                <Type>object</Type>
+				<SubType>ListView</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The new item text.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Data</Name>
+                <Desc>The new item data.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>IconIndex</Name>
+                <Desc>The one-based index of the icon for the item in the attached image list.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>-1</Default>
+				<Note Type="tip" Title="Tip">You can use -1 to add item without icon.</Note>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the one-based index of the new item . &#x0A;If the function fails, the return value is -1.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local nIndex</Default>
+        </Return>
+    </Function>
+</Functions>
+

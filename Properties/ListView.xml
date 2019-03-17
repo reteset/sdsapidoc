@@ -1,0 +1,277 @@
+<Properties For="Button" Desc="Properties For Button Control">
+	<Item>
+		<Name>Name</Name>
+		<Desc>Unique name of the control.</Desc>
+		<Type>string</Type>
+		<SubType>none</SubType>
+		<Default>""</Default>
+		<Designer>
+			<Type>CString</Type>
+			<SubType>EditSingle</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>X</Name>
+		<Desc>X position of the control.</Desc>
+		<Type>number</Type>
+		<SubType>none</SubType>
+		<Default>0</Default>
+		<Designer>
+			<Type>int</Type>
+			<SubType>Spin</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Y</Name>
+		<Desc>Y position of the control.</Desc>
+		<Type>number</Type>
+		<SubType>none</SubType>
+		<Default>0</Default>
+		<Designer>
+			<Type>int</Type>
+			<SubType>Spin</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Width</Name>
+		<Desc>Width of the control.</Desc>
+		<Type>number</Type>
+		<SubType>none</SubType>
+		<Default>0</Default>
+		<Designer>
+			<Type>int</Type>
+			<SubType>Spin</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Height</Name>
+		<Desc>Height of the control.</Desc>
+		<Type>number</Type>
+		<SubType>none</SubType>
+		<Default>0</Default>
+		<Designer>
+			<Type>int</Type>
+			<SubType>Spin</SubType>
+		</Designer>
+	</Item>
+	
+	
+	<Item>
+		<Name>ListStyle</Name>
+		<Desc>The view style of the control.</Desc>
+		<Type>number</Type>
+		<SubType>combo</SubType>
+		<Default>List</Default>
+		<Options Type="number">
+			<Item Name="Icon" Type="number" Value="0" Desc="Items are displayed as normal icons. " />
+			<Item Name="Report View" Type="number" Value="1" Desc="Items are displayed as report view." />
+			<Item Name="Small Icon" Type="number" Value="2" Desc="Items are displayed as small icons." />
+			<Item Name="List" Type="number" Value="3" Desc="Items are displayed as text captions." />
+			<Item Name="Tile" Type="number" Value="4" Desc="Items are displayed as mutiline liles." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>ComboBox</SubType>
+		</Designer>
+	</Item>
+
+	<Item>
+		<Name>Border</Name>
+		<Desc>The border style of the control.</Desc>
+		<Type>number</Type>
+		<SubType>combo</SubType>
+		<Default>Flat</Default>
+		<Options Type="number">
+			<Item Name="None" Type="number" Value="0" Desc="No border is visible. " />
+			<Item Name="Flat" Type="number" Value="1" Desc="A flat border." />
+			<Item Name="Sunken" Type="number" Value="2" Desc="A border with sunken edges." />
+			<Item Name="Bevel" Type="number" Value="3" Desc="A border with raised edges." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>ComboBox</SubType>
+		</Designer>
+	</Item>
+
+	<Item>
+		<Name>EditLabels</Name>
+		<Desc>Whether item text can be edited in place.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>false</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="An item's text can be modified by double clicking in to bounding cell." />
+			<Item Name="false" Type="boolean" Value="" Desc="Item text modification is not allowed." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>WrapLabels</Name>
+		<Desc>Whether to item text is displayed on a single line in icon view. By default, item text may wrap in icon view.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>true</Default>
+		<Note Type="info" Title="Info">This property takes effect if selected view style is icon or small icon.</Note>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Item text is displayed on a single line in icon view." />
+			<Item Name="false" Type="boolean" Value="" Desc="Item text is wrapped." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>HideLabels</Name>
+		<Desc>Whether to hide the labels in icon and small icon view.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>false</Default>
+		<Note Type="info" Title="Info">This property takes effect if selected view style is Icon or Small Icon.</Note>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Hide labels in icon and small icon view." />
+			<Item Name="false" Type="boolean" Value="" Desc="Show labels in icon and small icon view." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>GridLines</Name>
+		<Desc>Whether to display gridlines around items and subitems. Grid lines are visible only in report view.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>false</Default>
+		<Note Type="info" Title="Info">This property takes effect if selected view style is Report.</Note>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Show grid lines in report view." />
+			<Item Name="false" Type="boolean" Value="" Desc="Hide grid lines in report view." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>MultipleSelection</Name>
+		<Desc>Whether to allow multiple item selection.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>false</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Multiple item selection is enabled." />
+			<Item Name="false" Type="boolean" Value="" Desc="Multiple item selection is disabled." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>SortItems</Name>
+		<Desc>Automatically sort listbox items.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>false</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Auto sorting is enabled." />
+			<Item Name="false" Type="boolean" Value="" Desc="Auto sorting is disabled." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>AcceptFiles</Name>
+		<Desc>Allow user to drop files and folders into this control.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>false</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Accepting dropped files is enabled." />
+			<Item Name="false" Type="boolean" Value="" Desc="Accepting dropped files is disabled." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Enabled</Name>
+		<Desc>Allow user interaction.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>true</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Enable specified control." />
+			<Item Name="false" Type="boolean" Value="" Desc="Disable specified control." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Visible</Name>
+		<Desc>Visibility of the control.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>true</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Set control as visible. " />
+			<Item Name="false" Type="boolean" Value="" Desc="Set control as invisible." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>TabStop</Name>
+		<Desc>Specifies that the user can move to this control with the TAB key.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>true</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="User can move to this control with the TAB key." />
+			<Item Name="false" Type="boolean" Value="" Desc="User can not move to this control with the TAB key." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>FontUsage</Name>
+		<Desc>The usage type of font.</Desc>
+		<Type>number</Type>
+		<SubType>combo</SubType>
+		<Default>Use System Font</Default>
+		<Options Type="number">
+			<Item Name="Use System Font" Type="number" Value="0" Desc="Use default system font." />
+			<Item Name="Custom Font" Type="number" Value="2" Desc="Use a custom font." />
+		</Options>
+		<Note Type="info" Title="Info">In a unicode application using default system font is highly recomended.</Note>
+		<Designer>
+			<Type>int</Type>
+			<SubType>ComboBox</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Font</Name>
+		<Desc>Specifies the font for the control.</Desc>
+		<Type>object</Type>
+		<SubType>Font</SubType>
+		<Default>""</Default>
+		<Note Type="info" Title="Info">In a unicode application using default system font is highly recomended.</Note>
+		<Designer>
+			<Type>LOGFONT</Type>
+			<SubType>FontPicker</SubType>
+		</Designer>
+	</Item>
+</Properties>

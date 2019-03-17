@@ -1,0 +1,15 @@
+<EnvVars>		
+	<Arg>
+		<Name>ENV_WORKING_FOLDER</Name>
+		<Desc>The folder path that the application ran from.</Desc>
+		<Type>string</Type>
+		<SubType>Label</SubType>
+	</Arg>
+	<Arg>
+		<Name>ENV_DESKTOP_FOLDER</Name>
+		<Desc>Current Users desktop folder.</Desc>
+		<Type>string</Type>
+	</Arg> 	
+</EnvVars>			
+			
+

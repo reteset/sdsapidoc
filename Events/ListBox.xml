@@ -1,0 +1,308 @@
+<!--
+Lua Types:
+LUA_TNIL			0 nil
+LUA_TBOOLEAN		1 boolean
+LUA_TLIGHTUSERDATA	2 lightuserdata
+LUA_TNUMBER			3 number
+LUA_TSTRING			4 string
+LUA_TTABLE			5 table
+LUA_TFUNCTION		6 function
+LUA_TUSERDATA		7 userdata
+LUA_TTHREAD			8 thread
+-->
+
+<Events For="ListBox" Desc="Events For ListBox">
+<!--
+	<Event>
+		<Name>OnDestroyControl</Name>
+		<Desc>Fires when the control is being destroyed.</Desc>	
+		<Note Type="tip" Title="Tip">This is the time that the control is about to be destroyed and the object is being removed from memory.</Note>
+		<Note Type="tip" Title="Tip">All GUI controls are automatically destroyed when parent window is destroyed.</Note>
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnCreateControl</Name>
+		<Desc>Fires when the control is being created.</Desc>
+		<Note Type="tip" Title="Tip">All GUI controls are automatically destroyed when parent window is destroyed.</Note>		
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnKillFocus</Name>
+		<Desc>Fires when the control has lost the keyboard focus.</Desc>	
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnSetFocus</Name>
+		<Desc>Fires when the control has received the keyboard focus.</Desc>	
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>-->
+	<Event>
+		<Name>OnDropFiles</Name>
+		<Desc>Fires when the user has dropped files into the client area of the control.</Desc>	
+		<Note Type="info" Title="Info">Accept files property must be set to true in order to this event to work.</Note>
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>FilesTable</Name>
+				<Var>e_Files</Var>
+				<Type>table</Type>
+				<SubType>none</SubType>
+				<Desc>A numerically indexed table that contains paths of dropped files.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnSelChange</Name>
+		<Desc>Fires when the selection has changed in a listbox control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Selected Item</Name>
+				<Var>e_Selected</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>One-based index of the selected item in the listbox control.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnLButtonUp</Name>
+		<Desc>Fires when the left mouse button is up (released) in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnLButtonDown</Name>
+		<Desc>Fires when the left mouse button is down in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnRButtonUp</Name>
+		<Desc>Fires when the right mouse button is up (released) in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>OnRButtonDown</Name>
+		<Desc>Fires when the right mouse button is down in the client area of the control.</Desc>	
+		<Args>
+			<Arg>
+				<Name>ListBox</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>ListBox</SubType>
+				<Default>nil</Default>
+				<Desc>Handle of the control that fires this event.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse X Position</Name>
+				<Var>e_PosX</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>X coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+			<Arg>
+				<Name>Mouse Y Position</Name>
+				<Var>e_PosY</Var>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Y coordinate of the mouse pointer ,relative to the control's upper left corner.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>number</Type>
+			<Default>0</Default>
+			<Desc>No return value expected for this event.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+</Events>

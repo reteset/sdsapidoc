@@ -1,0 +1,587 @@
+<Functions For="String" Desc="Functions For String Class">
+	<Function>
+        <Name>CompareNoCase</Name>
+        <Desc>Performs a case insensitive comparison of the two strings.</Desc>
+        <Args>
+			<Arg>
+                <Name>String1</Name>
+                <Desc>The string to be compared.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>String2</Name>
+                <Desc>The string to compare.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>	
+            </Arg>						
+        </Args>
+        <Return>
+            <Desc>If the String1 is less than the String2, the return value is -1.&#x0A; If the String1 is greater than the String2, the return value is 1.&#x0A;If the strings are equal, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local nCompare</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Compare</Name>
+        <Desc>Performs a case sensitive comparison of the two strings.</Desc>
+        <Args>
+			<Arg>
+                <Name>String1</Name>
+                <Desc>The string to be compared.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>String2</Name>
+                <Desc>The string to compare.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>	
+            </Arg>						
+        </Args>
+        <Return>
+            <Desc>If the String1 is less than the String2, the return value is -1.&#x0A; If the String1 is greater than the String2, the return value is 1.&#x0A;If the strings are equal, the return value is 0.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local nCompare</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Split</Name>
+        <Desc>Splits a string into substrings by a delimiter.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to be splitted.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Delimiter</Name>
+                <Desc>The delimiter string.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>			
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a numerically indexed table that contains substrings splitted by the delimiter. &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>none</SubType>
+			<Default>local tblArray</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Insert</Name>
+        <Desc>Inserts a single character or a substring at the given index within the string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to insert new characters into.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The zero-based index to insert at. Where 0 points to the first character in the string and 1 points to second character.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Insert</Name>
+                <Desc>The string to insert.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>			
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is unmodified string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strNew</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsEmpty</Name>
+        <Desc>Checks whether the specified string is empty.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to check.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>				
+        </Args>
+        <Return>
+			<Desc>If the string is empty the return value is true. &#x0A;If the string contains any character, including whitespace, the return value is false.</Desc>
+			<Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Append</Name>
+        <Desc>Appends a sub string to the end of the string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to be appended.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Append</Name>
+                <Desc>The string to append.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>			
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is unmodified string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strNew</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Truncate</Name>
+        <Desc>Reduces the length of the string to the specified amount.</Desc>
+		<Note Type="tip" Title="Tip">Returns the specified amount of characters from the given string , This function is similar to String:Left() function.</Note>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to be modified.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>		
+			<Arg>
+                <Name>Count</Name>
+                <Desc>The new length of string.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is the truncated string. &#x0A;If the function fails, the return value is the unmodified string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strNew</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Trim</Name>
+        <Desc>Trims the specified set of characters from the beginning and end of the string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to be trimmed.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Characters</Name>
+                <Desc>The charaters to trim.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+				<Note Type="tip" Title="Tip">You can leave this blank to trim only whitespace characters.</Note>
+            </Arg>			
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is unmodified string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strTrimmed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>TrimRight</Name>
+        <Desc>Trims the specified set of characters from the end of the string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to be trimmed.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Characters</Name>
+                <Desc>The charaters to trim.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+				<Note Type="tip" Title="Tip">You can leave this blank to trim only whitespace characters.</Note>
+            </Arg>			
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is unmodified string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strTrimmed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>TrimLeft</Name>
+        <Desc>Trims the specified set of characters from the beginning of the string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to be trimmed.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Characters</Name>
+                <Desc>The charaters to trim.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+				<Note Type="tip" Title="Tip">You can leave this blank to trim only whitespace characters.</Note>
+            </Arg>			
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is unmodified string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strTrimmed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Mid</Name>
+        <Desc>Extracts the middle part of a string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to be searched.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>		
+			<Arg>
+                <Name>Start</Name>
+                <Desc>The zero-based position of the starting character. Where 0 points to the first character in the string and 1 points to second character.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Count</Name>
+                <Desc>The number of characters to copy beginning from the start position.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is the extracted string. &#x0A;If the function fails, the return value is the empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strPart</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Replace</Name>
+        <Desc>Replaces each occurrence of the old substring with the new substring.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to change charater.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>			
+			<Arg>
+                <Name>OldString</Name>
+                <Desc>The string to be replaced.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>	
+			<Arg>
+                <Name>NewString</Name>
+                <Desc>The string to replace with existing.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>			
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is the unmodified string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strNew</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>ReverseFind</Name>
+        <Desc>Finds a substring within the string, starting from the end.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to be searched.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>SubString</Name>
+                <Desc>The string to find.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>	
+            </Arg>
+			<Arg>
+                <Name>Start</Name>
+                <Desc>The zero-based index of the starting character. Where 0 points to the first character in the string and 1 points to second character.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>						
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the zero-based position of the first character of sub string . &#x0A;If the function fails,or sub string does not exist the return value is -1.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local nPos</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Find</Name>
+        <Desc>Finds a substring within the string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to be searched.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>SubString</Name>
+                <Desc>The string to find.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>	
+            </Arg>
+			<Arg>
+                <Name>Start</Name>
+                <Desc>The zero-based index of the starting character. Where 0 points to the first character in the string and 1 points to second character.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>						
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the zero-based position of the first character of sub string . &#x0A;If the function fails,or sub string does not exist the return value is -1.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local nPos</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Reverse</Name>
+        <Desc>Reverses the string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to reverse.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>		
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strReversed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>MakeLower</Name>
+        <Desc>Converts all the characters in the string to lowercase characters.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to convert charaters.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>		
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strLower</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>MakeUpper</Name>
+        <Desc>Converts all the characters in the string to uppercase characters.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to convert charaters.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>		
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strUpper</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetAt</Name>
+        <Desc>Returns the character at the specified location within the string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to extract charater.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The zero-based index of the character. Where 0 points to the first character in the string and 1 points to second character.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>		
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the character at the specified position in the string. &#x0A;If the function fails, the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strChar</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetAt</Name>
+        <Desc>Sets the character at the specified position to the specified value.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to change charater.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Index</Name>
+                <Desc>The zero-based index of the character. Where 0 points to the first character in the string and 1 points to second character.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Character</Name>
+                <Desc>The charater to replace with existing.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+				<Note Type="warning" Title="Warning">You can replace only one character at a time.</Note>
+            </Arg>			
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the updated string. &#x0A;If the function fails, the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strNew</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetLength</Name>
+        <Desc>Returns the character count of a string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to count.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>	
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the number of characters of given string. &#x0A;If the function fails, the return value is -1.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local nLength</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Right</Name>
+        <Desc>Returns the specified number of characters from the right side of a string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to extract right side.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Count</Name>
+                <Desc>The number of characters to return from right side of given string.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>		
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the right part of the string by the specified amount of characters. &#x0A;If the function fails, the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strRight</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>Left</Name>
+        <Desc>Returns the specified number of characters from the left side of a string.</Desc>
+        <Args>
+			<Arg>
+                <Name>String</Name>
+                <Desc>The string to extract left side.</Desc>
+                <Type>string</Type>
+				<SubType>none</SubType>
+                <Default>""</Default>
+            </Arg>
+			<Arg>
+                <Name>Count</Name>
+                <Desc>The number of characters to return from left side of given string.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>1</Default>
+            </Arg>		
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the left part of the string by the specified amount of characters. &#x0A;If the function fails, the return value is empty string.</Desc>
+            <Type>string</Type>
+            <SubType>none</SubType>
+			<Default>local strLeft</Default>
+        </Return>
+    </Function>
+</Functions>
+

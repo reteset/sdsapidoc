@@ -1,0 +1,183 @@
+<Properties For="Button" Desc="Properties For Button Control">
+	<Item>
+		<Name>Name</Name>
+		<Desc>Unique name of the control.</Desc>
+		<Type>string</Type>
+		<SubType>none</SubType>
+		<Default>""</Default>
+		<Designer>
+			<Type>CString</Type>
+			<SubType>EditSingle</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>X</Name>
+		<Desc>X position of the control.</Desc>
+		<Type>number</Type>
+		<SubType>none</SubType>
+		<Default>0</Default>
+		<Designer>
+			<Type>int</Type>
+			<SubType>Spin</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Y</Name>
+		<Desc>Y position of the control.</Desc>
+		<Type>number</Type>
+		<SubType>none</SubType>
+		<Default>0</Default>
+		<Designer>
+			<Type>int</Type>
+			<SubType>Spin</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Width</Name>
+		<Desc>Width of the control.</Desc>
+		<Type>number</Type>
+		<SubType>none</SubType>
+		<Default>0</Default>
+		<Designer>
+			<Type>int</Type>
+			<SubType>Spin</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Height</Name>
+		<Desc>Height of the control.</Desc>
+		<Type>number</Type>
+		<SubType>none</SubType>
+		<Default>0</Default>
+		<Designer>
+			<Type>int</Type>
+			<SubType>Spin</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Text</Name>
+		<Desc>The text of the control.</Desc>
+		<Type>string</Type>
+		<SubType>multiline</SubType>
+		<Default>""</Default>
+		<Designer>
+			<Type>CString</Type>
+			<SubType>EditMulti</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>ToolTip</Name>
+		<Desc>The new tooltip text. Maximum allowed ToolTip is 80 characters.</Desc>
+		<Type>string</Type>
+		<SubType>multiline</SubType>
+		<Default>""</Default>
+		<Designer>
+			<Type>CString</Type>
+			<SubType>EditMulti</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>TextAlign</Name>
+		<Desc>The horizontal alignment of the edit text.</Desc>
+		<Type>number</Type>
+		<SubType>combo</SubType>
+		<Default>Center</Default>
+		<Options Type="number">
+			<Item Name="Left" Type="number" Value="0" Desc="Aligned to the left. " />
+			<Item Name="Center" Type="number" Value="1" Desc="Aligned to the horizontal center." />
+			<Item Name="Right" Type="number" Value="2" Desc="Aligned to the right." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>ComboBox</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Enabled</Name>
+		<Desc>Allow user interaction.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>true</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Enable specified control." />
+			<Item Name="false" Type="boolean" Value="" Desc="Disable specified control." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Visible</Name>
+		<Desc>Visibility of the control.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>true</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="Set control as visible. " />
+			<Item Name="false" Type="boolean" Value="" Desc="Set control as invisible." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>TabStop</Name>
+		<Desc>Specifies that the user can move to this control with the TAB key.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>true</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="User can move to this control with the TAB key." />
+			<Item Name="false" Type="boolean" Value="" Desc="User can not move to this control with the TAB key." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Multiline</Name>
+		<Desc>Specifies that the control will display multiline text or single line text.</Desc>
+		<Type>boolean</Type>
+		<SubType>combo</SubType>
+		<Default>false</Default>
+		<Options Type="boolean">
+			<Item Name="true" Type="boolean" Value="" Desc="This is a multiline edit control." />
+			<Item Name="false" Type="boolean" Value="" Desc="This is a single line edit control." />
+		</Options>
+		<Designer>
+			<Type>int</Type>
+			<SubType>bool</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>FontUsage</Name>
+		<Desc>The usage type of font.</Desc>
+		<Type>number</Type>
+		<SubType>combo</SubType>
+		<Default>Use System Font</Default>
+		<Options Type="number">
+			<Item Name="Use System Font" Type="number" Value="0" Desc="Use default system font." />
+			<Item Name="Custom Font" Type="number" Value="2" Desc="Use a custom font." />
+		</Options>
+		<Note Type="info" Title="Info">In a unicode application using default system font is highly recomended.</Note>
+		<Designer>
+			<Type>int</Type>
+			<SubType>ComboBox</SubType>
+		</Designer>
+	</Item>
+	<Item>
+		<Name>Font</Name>
+		<Desc>Specifies the font for the control.</Desc>
+		<Type>object</Type>
+		<SubType>Font</SubType>
+		<Default>""</Default>
+		<Note Type="info" Title="Info">In a unicode application using default system font is highly recomended.</Note>
+		<Designer>
+			<Type>LOGFONT</Type>
+			<SubType>FontPicker</SubType>
+		</Designer>
+	</Item>
+</Properties>

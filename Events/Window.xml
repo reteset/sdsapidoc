@@ -1,0 +1,370 @@
+<!--
+Lua Types:
+LUA_TNIL			0 nil
+LUA_TBOOLEAN		1 boolean
+LUA_TLIGHTUSERDATA	2 lightuserdata
+LUA_TNUMBER			3 number
+LUA_TSTRING			4 string
+LUA_TTABLE			5 table
+LUA_TFUNCTION		6 function
+LUA_TUSERDATA		7 userdata
+LUA_TTHREAD			8 thread
+-->
+
+<Events For="Window" Desc="Events For Windows">
+	<Event>
+        <Name>OnMenu</Name>
+        <Desc>Fires when a menu item or toolbar button was clicked.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Command ID</Name>
+				<Var>e_ID</Var>
+                <Desc>The command id of the menu item or toolbar button.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If this event handled then return true. &#x0A;If not then event must return false.</Desc>
+            <Default>true</Default>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+			<Options Type="boolean">
+				<Item Name="true" Type="boolean" Value="" Desc="The event handled." />
+				<Item Name="false" Type="boolean" Value="" Desc="The event ignored." />
+			</Options>       
+        </Return>
+    </Event>
+	<!-- FOLLOWING FUNTIONS WILL BE REVIEWED-->
+	<Event>
+		<Name>OnCreate</Name>
+		<Desc>Fires when window is being initialized.</Desc>
+		<Info Type="note" Title="Test">Test Information</Info>
+		<Args>
+			<Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+			<Required>0</Required>
+			<Type>boolean</Type>
+			<Default>true</Default>
+			<Desc>Return true to continue creation of window ,false to cancel creation of window.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+        <Name>OnPaint</Name>
+        <Desc>Fires when a window about to be painted.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Device Context</Name>
+				<Var>e_hDC</Var>
+                <Desc>The handle of a display device context (DC) for the client area of the specified window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+            <Arg>
+                <Name>Client Width</Name>
+				<Var>e_Width</Var>
+                <Desc>The width of the client area of the window in pixels.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+            <Arg>
+                <Name>Window Height</Name>
+				<Var>e_Height</Var>
+                <Desc>The height of the window in pixels.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>number</SubType>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If any painting applied to target DC then function must return true. &#x0A;If no painting applied, then function must return false.</Desc>
+            <Default>true</Default>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>          
+			<Options Type="boolean">
+				<Item Name="true" Type="boolean" Value="" Desc="Painting applied to target DC." />
+				<Item Name="false" Type="boolean" Value="" Desc="No painting applied to target DC." />
+			</Options>
+        </Return>
+    </Event>
+    <Event>
+        <Name>OnLButtonDown</Name>
+        <Desc>Fires when left mouse button down over a window.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Mouse X</Name>
+				<Var>e_MouseX</Var>
+                <Desc>The x position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+            <Arg>
+                <Name>Mouse Y</Name>
+				<Var>e_MouseY</Var>
+                <Desc>The y position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return />
+    </Event>
+    <Event>
+        <Name>OnLButtonUp</Name>
+        <Desc>Fires when left mouse button up (released) over a window.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Mouse X</Name>
+				<Var>e_MouseX</Var>
+                <Desc>The x position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+            <Arg>
+                <Name>Mouse Y</Name>
+				<Var>e_MouseY</Var>
+                <Desc>The y position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return />
+    </Event>
+    <Event>
+        <Name>OnLButtonDblClick</Name>
+        <Desc>Fires when left mouse button double clicked over a window.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Mouse X</Name>
+				<Var>e_MouseX</Var>
+                <Desc>The x position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+            <Arg>
+                <Name>Mouse Y</Name>
+				<Var>e_MouseY</Var>
+                <Desc>The y position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return />
+    </Event>
+    <Event>
+        <Name>OnRButtonDown</Name>
+        <Desc>Fires when right mouse button down over a window.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Mouse X</Name>
+				<Var>e_MouseX</Var>
+                <Desc>The x position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+            <Arg>
+                <Name>Mouse Y</Name>
+				<Var>e_MouseY</Var>
+                <Desc>The y position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return />
+    </Event>
+    <Event>
+        <Name>OnRButtonUp</Name>
+        <Desc>Fires when right mouse button up (released) over a window.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+			<Arg>
+                <Name>Mouse X</Name>
+				<Var>e_MouseX</Var>
+                <Desc>The x position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+            <Arg>
+                <Name>Mouse Y</Name>
+				<Var>e_MouseY</Var>
+                <Desc>The y position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return />
+    </Event>
+    <Event>
+        <Name>OnRButtonDblClick</Name>
+        <Desc>Fires when right mouse button double clicked over a window.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Mouse X</Name>
+				<Var>e_MouseX</Var>
+                <Desc>The x position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+            <Arg>
+                <Name>Mouse Y</Name>
+				<Var>e_MouseY</Var>
+                <Desc>The y position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return />
+    </Event>
+    <Event>
+        <Name>OnMouseMove</Name>
+        <Desc>Fires when mouse moves over a window.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Mouse X</Name>
+				<Var>e_MouseX</Var>
+                <Desc>The x position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+            <Arg>
+                <Name>Mouse Y</Name>
+				<Var>e_MouseY</Var>
+                <Desc>The y position of the mouse , relative to upper-left corner of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return />
+    </Event>
+    <Event>
+        <Name>OnVScroll</Name>
+        <Desc>Fires when vertical scrollbar position of a window changed.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Scroll Position</Name>
+				<Var>e_Pos</Var>
+                <Desc>The current position of the vertical scrollbar of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return />
+    </Event>
+    <Event>
+        <Name>OnHScroll</Name>
+        <Desc>Fires when horizontal scrollbar position of a window changed.</Desc>
+        <Args>
+            <Arg>
+				<Name>Window</Name>
+				<Var>e_Sender</Var>
+				<Type>object</Type>
+				<SubType>Window</SubType>
+				<Desc>Handle of the window that fires this event.</Desc>
+			</Arg>
+            <Arg>
+                <Name>Scroll Position</Name>
+				<Var>e_Pos</Var>
+                <Desc>The current position of the horizontal scrollbar of window.</Desc>
+                <Type>number</Type>
+                <Default>0</Default>
+                <SubType>none</SubType>
+            </Arg>
+        </Args>
+        <Return />
+    </Event>
+</Events>

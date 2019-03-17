@@ -1,0 +1,497 @@
+<Functions For="Window" Desc="Functions For Windows">
+	<Function>
+        <Name>SetWindowText</Name>
+        <Desc>Sets the text of the title bar of a window.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The new title text.</Desc>
+                <Type>string</Type>
+				<SubType>multiline</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>StatusBarSetText</Name>
+        <Desc>Sets the text of the status bar of a window.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Text</Name>
+                <Desc>The new status text.</Desc>
+                <Type>string</Type>
+				<SubType>multiline</SubType>
+                <Default>""</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetSize</Name>
+        <Desc>Sets the display size of specified window.</Desc>
+		<Note Type="info" Title="Info">For popup windows with captions & borders , The Width and Height arguments include caption and borders as well .</Note>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Width</Name>
+                <Desc>The new width of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Height</Name>
+                <Desc>The new height of the control in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetPosition</Name>
+        <Desc>Gets the display position of specified control.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (X , Y) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblPos</Default>
+			<Options Type="table">
+				<Item Name="X" Type="number" Value="" Desc="Specifies the x position of the window in pixels, For child windows this is relative to the parent window's top-left corner." />
+				<Item Name="Y" Type="number" Value="" Desc="Specifies the y position of the window in pixels, For child windows this is relative to the parent window's top-left corner." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetSize</Name>
+        <Desc>Gets the display size of specified window,including caption and borders if target is a top level window with caption and borders.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (Width , Height) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblSize</Default>
+			<Options Type="table">
+				<Item Name="Width" Type="number" Value="" Desc="Specifies the width of the window in pixels." />
+				<Item Name="Height" Type="number" Value="" Desc="Specifies the height of the window in pixels." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>GetClientSize</Name>
+        <Desc>Gets the display size of client are ofspecified window.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is a table that contains fields (Width , Height) . &#x0A;If the function fails, the return value is nil.</Desc>
+            <Type>table</Type>
+            <SubType>table</SubType>
+			<Default>local tblSize</Default>
+			<Options Type="table">
+				<Item Name="Width" Type="number" Value="" Desc="Specifies the client area width of the window in pixels." />
+				<Item Name="Height" Type="number" Value="" Desc="Specifies the client area height of the window in pixels." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>SetPosition</Name>
+        <Desc>Sets the display position of specified window.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>X</Name>
+                <Desc>The new x position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Y</Name>
+                <Desc>The new y position of the control in pixels, relative to the parent window's left-top corner.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+         <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>CreateChild</Name>
+        <Desc>Creates a window as the child of another window.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be created.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Parent</Name>
+                <Desc>A handle to the parent window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+				<Note Type="info" Title="Info">A parent window is required for child windows.</Note>				
+            </Arg>
+			<Arg>
+                <Name>X</Name>
+                <Desc>X position of the window , relative to the parent window.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Y</Name>
+                <Desc>Y position of the window , relative to the parent window.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Width</Name>
+                <Desc>The width of the window in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+			<Arg>
+                <Name>Height</Name>
+                <Desc>The height of the window in pixels.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>ShowWindow</Name>
+        <Desc>Shows a previously hidden window.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be hidden.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Show Command</Name>
+                <Desc>A handle to the button control.</Desc>
+                <Type>number</Type>
+				<SubType>combo</SubType>
+                <Default>SW_SHOWNORMAL</Default>
+				<Options Type="number">
+					<Item Name="SW_HIDE" Type="number" Value="0" Desc="Hides the window and activates another window."/>
+					<Item Name="SW_SHOWNORMAL" Type="number" Value="1" Desc="Activates and displays a window. If the window is minimized or maximized, the system restores it to its original size and position."/>
+					<Item Name="SW_SHOWMINIMIZED" Type="number" Value="2" Desc="Activates the window and displays it as a minimized window."/>
+					<Item Name="HSW_SHOWMAXIMIZED" Type="number" Value="3" Desc="Activates the window and displays it as a maximized window."/>
+					<Item Name="SW_SHOWNOACTIVATE" Type="number" Value="4" Desc="Displays a window in its most recent size and position. This value is simila to SW_SHOWNORMAL, except that the window is not activated."/>
+					<Item Name="SW_SHOW" Type="number" Value="5" Desc="Activates the window and displays it in its current size and position."/>
+					<Item Name="SW_SHOWDEFAULT" Type="number" Value="10" Desc="Default show command used by window itself"/>
+				</Options>
+            </Arg>
+        </Args>
+		
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>none</SubType>
+        </Return>
+    </Function>
+	<Function>
+        <Name>HideWindow</Name>
+        <Desc>Hides the specified window.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be hidden.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>none</SubType>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsVisible</Name>
+        <Desc>Retrieves the whether specified window is visible.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be checked.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the specified window is visible then, the return value is true. &#x0A;If specified window is not visible then, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+			<Default>local bIsVisible</Default>
+			<Options Type="boolean">
+				<Item Name="true" Type="boolean" Value="" Desc="Spcified window is a visible." />
+				<Item Name="false" Type="boolean" Value="" Desc="Specified window is not visible." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsChildWindow</Name>
+        <Desc>Retrieves the whether specified window is a child of another window.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be checked.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the specified window is a child window then, the return value is true. &#x0A;If specified window is not a child window then, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+			<Default>local bIsChild</Default>
+			<Options Type="boolean">
+				<Item Name="true" Type="boolean" Value="" Desc="Spcified window is a child of another window." />
+				<Item Name="false" Type="boolean" Value="" Desc="Specified window is a top level window." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsModal</Name>
+        <Desc>Retrieves the whether specified window is a modal dialog.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be checked.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the specified window is a modal dialog then, the return value is true. &#x0A;If specified window is not a modal dialog then, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+			<Default>local bIsModal</Default>
+			<Options Type="boolean">
+				<Item Name="true" Type="boolean" Value="" Desc="Spcified window is a modal dialog." />
+				<Item Name="false" Type="boolean" Value="" Desc="Specified window is not a modal dialog." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>IsWindow</Name>
+        <Desc>Retrieves the whether specified object points to a valid window.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be checked.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the specified object points to a valid window , the return value is true. &#x0A;If there is no window associated with specified object then, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+			<Default>local bIsWindow</Default>
+			<Options Type="boolean">
+				<Item Name="true" Type="boolean" Value="" Desc="Spcified object has a valid window (created)." />
+				<Item Name="false" Type="boolean" Value="" Desc="Specified object has not got a window (created)." />
+			</Options>
+        </Return>
+    </Function>
+	<Function>
+        <Name>CreateModal</Name>
+        <Desc>Creates a window as a modal popup dialog.</Desc>
+		<Note Type="warning" Title="Warning">Windows with standard style (with minimize,maximize buttons) should not be created as modal dialogs.</Note>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be created.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Parent</Name>
+                <Desc>A handle to the parent window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+				<Note Type="info" Title="Info">A parent window is required for modal dialogs.</Note>
+				<Note Type="info" Title="Info">If parent window does not exist or argument is nil then last active popup window will be used as parent.</Note>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is the numeric result of the dialog. &#x0A;If the function fails, the return value is -1.</Desc>
+            <Type>number</Type>
+            <SubType>none</SubType>
+			<Default>local nIndex</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>CreateModeless</Name>
+        <Desc>Creates a window as a modeless popup dialog.</Desc>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be created.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Parent</Name>
+                <Desc>A handle to the parent window object.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+				<Note Type="info" Title="Info">A parent window is required for modeless dialogs.</Note>				
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>EndModal</Name>
+        <Desc>Destroys a modal dialog window.</Desc>
+		<Note Type="info" Title="Info">This function can also be used for Modeless dialogs , The Result argument is ignored in that case.</Note>
+		<Note Type="info" Title="Info">You can use Window:DestroyWindow to destroy any type of non-modal window.</Note>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be destroyed.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+			<Arg>
+                <Name>Result</Name>
+                <Desc>The dialog result this argument will be passed as the return value to Window:CreateModal function.</Desc>
+                <Type>number</Type>
+				<SubType>none</SubType>
+                <Default>0</Default>
+				<Note Type="warning" Title="Warning">Do not use -1 as the argument ,that indicates the failure.</Note>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+	<Function>
+        <Name>DestroyWindow</Name>
+        <Desc>Destroys a window.</Desc>
+		<Note Type="info" Title="Info">Destroying main window means application exit.</Note>
+		<Note Type="warning" Title="Warning">This function should not be used for modal dialogs.</Note>
+        <Args>
+            <Arg>
+                <Name>Window</Name>
+                <Desc>A handle to the window object that will be destroyed.</Desc>
+                <Type>object</Type>
+				<SubType>Window</SubType>
+                <Default>nil</Default>
+            </Arg>
+        </Args>
+        <Return>
+            <Desc>If the function succeeds, the return value is true. &#x0A;If the function fails, the return value is false.</Desc>
+            <Type>boolean</Type>
+            <SubType>boolean</SubType>
+			<Default>local bSucceed</Default>
+        </Return>
+    </Function>
+</Functions>
+

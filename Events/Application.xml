@@ -1,0 +1,73 @@
+<!--
+Lua Types:
+LUA_TNIL			0 nil
+LUA_TBOOLEAN		1 boolean
+LUA_TLIGHTUSERDATA	2 lightuserdata
+LUA_TNUMBER			3 number
+LUA_TSTRING			4 string
+LUA_TTABLE			5 table
+LUA_TFUNCTION		6 function
+LUA_TUSERDATA		7 userdata
+LUA_TTHREAD			8 thread
+-->
+
+<Events For="Application" Desc="Events For Application">
+	<Event>
+		<Name>Globals</Name>
+		<Desc>Global functions of the application ,This is the fist executed application wide event.</Desc>
+		<Info Type="tip" Title="Tip">You can define your global functions here</Info>
+		<Info Type="warn" Title="Warning">Do not call any function here that is related with a visual component such as a window or a control</Info>
+		<Args />
+		<Return>
+			<Required>0</Required>
+			<Type>boolean</Type>
+			<Default>true</Default>
+			<Desc>Return true to continue creation of window ,false to cancel creation of window.</Desc>
+		</Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>InitInstance</Name>
+		<Desc>Called when a new instance of the application is being initialized.</Desc>
+		<Args>
+			<Arg>
+				<Name>Instance Handle</Name>
+				<Var>e_hInstance</Var>
+				<Default>0</Default>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Handle of the application instance.</Desc>
+			</Arg>
+		</Args>
+		<Return>
+            <Desc>If application should continue processing then function must return true. &#x0A;If application should not continue then function must return false.</Desc>
+            <Default>true</Default>
+            <Type>boolean</Type>
+            <SubType>combo</SubType>
+            <Constraints>
+                <Item Name="true" Value="n\a" Desc="Continue startup of the application." />
+                <Item Name="false" Value="n\a" Desc="Exit without any further processing." />
+            </Constraints>
+        </Return>
+		<Script>
+		</Script>	
+	</Event>
+	<Event>
+		<Name>ExitInstance</Name>
+		<Desc>Called when application instance is being destroyed.</Desc>
+		<Args>
+			<Arg>
+				<Name>Instance Handle</Name>
+				<Var>e_hInstance</Var>
+				<Default>0</Default>
+				<Type>number</Type>
+				<SubType>none</SubType>
+				<Desc>Handle of the application instance.</Desc>
+			</Arg>
+		</Args>
+		<Return />
+		<Script>
+		</Script>	
+	</Event>
+</Events>

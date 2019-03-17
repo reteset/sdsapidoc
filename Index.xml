@@ -1,0 +1,125 @@
+<Symbols>
+	<Symbol>
+		<Name>Edit</Name>
+		<Desc>Edit is a input control that has single line and multi line options.
+		Edit control is used to get user input and edit existing text content such as password, url, file location .
+		</Desc>
+		<SkinAware>1</SkinAware>
+		<BuildIn>1</BuildIn>
+		<IsControl>1</IsControl>
+		<IsVisual>1</IsVisual>
+		<HasFunctions>1</HasFunctions>
+		<HasEvents>1</HasEvents>
+		<HasProperties>1</HasProperties>
+		<Functions>Functions\Edit.xml</Functions>
+		<Events>Events\Edit.xml</Events>
+		<Properties>Properties\Edit.xml</Properties>
+	</Symbol>
+	<Symbol>
+		<Name>WebBrowser</Name>
+		<Desc>WebBrowser is a wrapper control of Internet Eplorer.
+		</Desc>
+		<SkinAware>1</SkinAware>
+		<BuildIn>1</BuildIn>
+		<IsControl>1</IsControl>
+		<IsVisual>1</IsVisual>
+		<HasFunctions>1</HasFunctions>
+		<HasEvents>1</HasEvents>
+		<HasProperties>1</HasProperties>
+		<Functions>Functions\WebBrowser.xml</Functions>
+		<Events>Events\WebBrowser.xml</Events>
+		<Properties>Properties\WebBrowser.xml</Properties>
+	</Symbol>
+	<Symbol>
+		<Name>DateTimePicker</Name>
+		<Desc>DateTimePicker is a date/time selection control that allows to select a date or time with a dropdown calendar or inplace editing.
+		</Desc>
+		<SkinAware>1</SkinAware>
+		<BuildIn>1</BuildIn>
+		<IsControl>1</IsControl>
+		<IsVisual>1</IsVisual>
+		<HasFunctions>1</HasFunctions>
+		<HasEvents>1</HasEvents>
+		<HasProperties>1</HasProperties>
+		<Functions>Functions\DateTimePicker.xml</Functions>
+		<Events>Events\DateTimePicker.xml</Events>
+		<Properties>Properties\DateTimePicker.xml</Properties>
+	</Symbol>
+	<Symbol>
+		<Name>ComboBox</Name>
+		<Desc>ComboBox is a selection control that has a drop down listbox with available options.
+		</Desc>
+		<SkinAware>1</SkinAware>
+		<BuildIn>1</BuildIn>
+		<IsControl>1</IsControl>
+		<IsVisual>1</IsVisual>
+		<HasFunctions>1</HasFunctions>
+		<HasEvents>1</HasEvents>
+		<HasProperties>1</HasProperties>
+		<Functions>Functions\ComboBox.xml</Functions>
+		<Events>Events\ComboBox.xml</Events>
+		<Properties>Properties\ComboBox.xml</Properties>
+	</Symbol>
+	<Symbol>
+		<Name>Button</Name>
+		<Desc>Button is a push like button control that uses native windows theme 
+		This conrol is also compatible with third party skin libraries 
+		</Desc>
+		<SkinAware>1</SkinAware>
+		<BuildIn>1</BuildIn>
+		<IsControl>1</IsControl>
+		<IsVisual>1</IsVisual>
+		<HasFunctions>1</HasFunctions>
+		<HasEvents>1</HasEvents>
+		<HasProperties>1</HasProperties>
+		<Functions>Functions\Button.xml</Functions>
+		<Events>Events\Button.xml</Events>
+		<Properties>Properties\Button.xml</Properties>
+	</Symbol>
+	<Symbol>
+		<Name>BounceButton</Name>
+		<Desc>BounceButton is a push like button control that uses a custom drawing style to achieve bounce effect
+		</Desc>
+		<SkinAware>0</SkinAware>
+		<BuildIn>1</BuildIn>
+		<IsControl>1</IsControl>
+		<IsVisual>1</IsVisual>
+		<HasFunctions>1</HasFunctions>
+		<HasEvents>1</HasEvents>
+		<HasProperties>1</HasProperties>
+		<Functions>Functions\BounceButton.xml</Functions>
+		<Events>Events\BounceButton.xml</Events>
+		<Properties>Properties\BounceButton.xml</Properties>
+	</Symbol>
+	<Symbol>
+		<Name>RadioButton</Name>
+		<Desc>RadioButton is a push like button control that has a radio style with 2 states checked or unchecked
+		</Desc>
+		<SkinAware>1</SkinAware>
+		<BuildIn>1</BuildIn>
+		<IsControl>1</IsControl>
+		<IsVisual>1</IsVisual>
+		<HasFunctions>1</HasFunctions>
+		<HasEvents>1</HasEvents>
+		<HasProperties>1</HasProperties>
+		<Functions>Functions\RadioButton.xml</Functions>
+		<Events>Events\RadioButton.xml</Events>
+		<Properties>Properties\RadioButton.xml</Properties>
+	</Symbol>
+	<Symbol>
+		<Name>ListView</Name>
+		<Desc>ListView is a extended listbox control that supports various view styles such as : large icon,small icon,list,report,tile
+		This conrol is also compatible with third party skin libraries 
+		</Desc>
+		<SkinAware>1</SkinAware>
+		<BuildIn>1</BuildIn>
+		<IsControl>1</IsControl>
+		<IsVisual>1</IsVisual>
+		<HasFunctions>1</HasFunctions>
+		<HasEvents>1</HasEvents>
+		<HasProperties>1</HasProperties>
+		<Functions>Functions\ListView.xml</Functions>
+		<Events>Events\ListView.xml</Events>
+		<Properties>Properties\ListView.xml</Properties>
+	</Symbol>
+</Symbols>
